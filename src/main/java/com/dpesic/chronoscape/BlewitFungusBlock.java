@@ -39,11 +39,11 @@ public class BlewitFungusBlock extends BushBlock { // BushBlock extends bonemeal
     }
 
     protected VoxelShape shapeMycelium() {
-        return Block.column(14.0D, 0.0D, 2.0D);
+        return Block.column(14.0D, 0.0D, 3.0D);
     }
 
     protected VoxelShape shapeMushroom() {
-        return Block.column(14.0D, 0.0D, 10.0D);
+        return Block.column(14.0D, 0.0D, 14.0D);
     }
 
     @Override
