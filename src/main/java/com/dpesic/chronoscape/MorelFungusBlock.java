@@ -4,7 +4,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class MorelFungusBlock extends BlewitFungusBlock{
+public class MorelFungusBlock extends AbstractFungusBlock{
 
     public MorelFungusBlock(Properties props) {
         super(props);

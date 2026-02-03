@@ -2,7 +2,7 @@ package com.dpesic.chronoscape;
 
 import net.minecraft.world.level.block.state.BlockState;
 
-public class JackOLanternMushroomItem extends BlewitItem{
+public class JackOLanternMushroomItem extends AbstractMushroomItem{
 
     public JackOLanternMushroomItem(Properties props) {
         super(props);

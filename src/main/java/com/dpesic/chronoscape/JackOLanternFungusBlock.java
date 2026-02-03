@@ -4,7 +4,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class JackOLanternFungusBlock extends BlewitFungusBlock{
+public class JackOLanternFungusBlock extends AbstractFungusBlock{
 
     public JackOLanternFungusBlock(Properties props) {
         super(props);

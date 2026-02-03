@@ -2,7 +2,7 @@ package com.dpesic.chronoscape;
 
 import net.minecraft.world.level.block.state.BlockState;
 
-public class MorelItem extends BlewitItem{
+public class MorelItem extends AbstractMushroomItem{
 
     public MorelItem(Properties props) {
         super(props);
