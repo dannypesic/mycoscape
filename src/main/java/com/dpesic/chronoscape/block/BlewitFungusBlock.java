@@ -1,19 +1,21 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.block;
 
+import com.dpesic.chronoscape.core.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class JackOLanternFungusBlock extends AbstractFungusBlock{
+public class BlewitFungusBlock extends AbstractFungusBlock {
 
-    public JackOLanternFungusBlock(Properties props) {
+    public BlewitFungusBlock(BlockBehaviour.Properties props) {
         super(props);
     }
 
     @Override
     protected ItemStack dropItemstack() {
         int dropCount = 1;
-        return new ItemStack(ModItems.JACK_O_LANTERN_MUSHROOM.get(), dropCount);
+        return new ItemStack(ModItems.MOREL.get(), dropCount);
     }
 
     @Override
@@ -23,7 +25,8 @@ public class JackOLanternFungusBlock extends AbstractFungusBlock{
 
     @Override
     protected VoxelShape shapeMushroom() {
-        return Block.column(14.0D, 0.0D, 13.0D);
+        return Block.column(14.0D, 0.0D, 14.0D);
     }
+
 
 }

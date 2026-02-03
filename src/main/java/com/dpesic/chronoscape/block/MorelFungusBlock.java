@@ -1,10 +1,11 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.block;
 
+import com.dpesic.chronoscape.core.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class MorelFungusBlock extends AbstractFungusBlock{
+public class MorelFungusBlock extends AbstractFungusBlock {
 
     public MorelFungusBlock(Properties props) {
         super(props);

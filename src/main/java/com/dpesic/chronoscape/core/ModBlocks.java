@@ -1,5 +1,8 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.core;
 
+import com.dpesic.chronoscape.block.BlewitFungusBlock;
+import com.dpesic.chronoscape.block.JackOLanternFungusBlock;
+import com.dpesic.chronoscape.block.MorelFungusBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;

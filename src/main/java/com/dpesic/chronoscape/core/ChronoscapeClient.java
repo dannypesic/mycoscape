@@ -1,6 +1,5 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.core;
 
-import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;

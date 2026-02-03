@@ -1,4 +1,4 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.item;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;

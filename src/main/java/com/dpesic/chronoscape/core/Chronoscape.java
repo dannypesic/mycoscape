@@ -1,4 +1,4 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.core;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;

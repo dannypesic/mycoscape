@@ -1,5 +1,8 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.core;
 
+import com.dpesic.chronoscape.item.BlewitItem;
+import com.dpesic.chronoscape.item.JackOLanternMushroomItem;
+import com.dpesic.chronoscape.item.MorelItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;

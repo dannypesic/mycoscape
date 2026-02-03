@@ -1,5 +1,6 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.item;
 
+import com.dpesic.chronoscape.core.ModBlocks;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class MorelItem extends AbstractMushroomItem{

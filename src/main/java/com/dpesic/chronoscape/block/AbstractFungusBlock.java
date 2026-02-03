@@ -1,4 +1,4 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

@@ -1,4 +1,4 @@
-package com.dpesic.chronoscape;
+package com.dpesic.chronoscape.core;
 
 import java.util.List;
 
