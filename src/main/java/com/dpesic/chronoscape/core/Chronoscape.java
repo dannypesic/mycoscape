@@ -14,8 +14,10 @@ import net.minecraft.world.item.ItemStack;
 public class Chronoscape {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "chronoscape";
+    private final IEventBus modBus;
 
     public Chronoscape(IEventBus modBus) {
+        this.modBus = modBus;
         ModItems.ITEMS.register(modBus);
         ModBlocks.BLOCKS.register(modBus);
         modBus.addListener(Chronoscape::addCreative);
@@ -38,7 +40,7 @@ public class Chronoscape {
 
             event.insertAfter(
                     new ItemStack(Items.WARPED_FUNGUS),
-                    new ItemStack(ModItems.BLEWIT.get()),
+                     new ItemStack(ModItems.BLEWIT.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
 

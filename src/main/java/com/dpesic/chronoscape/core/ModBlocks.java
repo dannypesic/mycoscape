@@ -3,6 +3,8 @@ package com.dpesic.chronoscape.core;
 import com.dpesic.chronoscape.block.BlewitFungusBlock;
 import com.dpesic.chronoscape.block.JackOLanternFungusBlock;
 import com.dpesic.chronoscape.block.MorelFungusBlock;
+import com.dpesic.chronoscape.block.NecroshroomFungusBlock;
+
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -38,6 +40,17 @@ public class ModBlocks {
     public static final DeferredBlock<JackOLanternFungusBlock> JACK_O_LANTERN_FUNGUS = BLOCKS.registerBlock(
             "jack_o_lantern_fungus",
             JackOLanternFungusBlock::new,
+            BlockBehaviour.Properties.of()
+                    .noCollision()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.ROOTS)
+    );
+
+    @SuppressWarnings("removal")
+    public static final DeferredBlock<NecroshroomFungusBlock> NECROSHROOM_FUNGUS = BLOCKS.registerBlock(
+            "necroshroom_fungus",
+            NecroshroomFungusBlock::new,
             BlockBehaviour.Properties.of()
                     .noCollision()
                     .randomTicks()
