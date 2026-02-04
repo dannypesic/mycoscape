@@ -34,6 +34,12 @@ public class Chronoscape {
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
 
+            event.insertAfter(
+                    new ItemStack(Items.NETHERITE_INGOT),
+                    new ItemStack(ModItems.ENRICHED_ALLOY.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+
         }
 
         // Natural Blocks tab

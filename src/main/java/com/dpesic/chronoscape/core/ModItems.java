@@ -28,6 +28,10 @@ public class ModItems {
             "imbued_shard"
     );
 
+    public static final DeferredItem<Item> ENRICHED_ALLOY = ITEMS.registerSimpleItem(
+            "enriched_alloy"
+    );
+
     public static final DeferredItem<BlewitItem> BLEWIT = ITEMS.registerItem(
             "blewit",
             BlewitItem::new,
@@ -45,6 +49,7 @@ public class ModItems {
             JackOLanternMushroomItem::new,
             new Item.Properties()
     );
+
     public static final DeferredItem<NecroshroomItem> NECROSHROOM = ITEMS.registerItem(
             "necroshroom",
             NecroshroomItem::new,
@@ -52,6 +57,7 @@ public class ModItems {
     );
 
 
+    // Block Items
     public static final DeferredItem<BlockItem> FUNGAL_SUBSTRATE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
             "fungal_substrate",
             ModBlocks.FUNGAL_SUBSTRATE,
