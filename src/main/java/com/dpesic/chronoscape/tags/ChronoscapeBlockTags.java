@@ -10,6 +10,7 @@ import net.minecraft.resources.Identifier;
 public class ChronoscapeBlockTags {
 
     public static final TagKey<Block> FUNGI_GROUND = chronoscapeTag("fungi_ground");
+    public static final TagKey<Block> ROTWOOD = chronoscapeTag("rotwood");
 
     private ChronoscapeBlockTags() {
     }

@@ -7,6 +7,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -37,6 +38,7 @@ public abstract class AbstractFungusBlock extends BushBlock { // BushBlock exten
     protected abstract VoxelShape shapeMycelium(); // return Block.column(D, D, D);
 
     protected abstract VoxelShape shapeMushroom(); // return Block.column(D, D, D);
+
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> b) {

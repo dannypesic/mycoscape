@@ -1,8 +1,14 @@
 package com.dpesic.chronoscape.block;
 
+import com.dpesic.chronoscape.core.ModBlocks;
 import com.dpesic.chronoscape.core.ModItems;
+import com.dpesic.chronoscape.tags.ChronoscapeBlockTags;
+
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class NecroshroomFungusBlock extends AbstractFungusBlock {
@@ -27,5 +33,8 @@ public class NecroshroomFungusBlock extends AbstractFungusBlock {
         return Block.column(14.0D, 0.0D, 14.0D);
     }
 
-    //make me work only on rotwood!
+    @Override
+    protected boolean mayPlaceOn(BlockState below, BlockGetter level, BlockPos pos) {
+        return below.is(ModBlocks.ROTWOOD);
+    }
 }

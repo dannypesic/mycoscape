@@ -1,17 +1,19 @@
 package com.dpesic.chronoscape.item;
 
+import com.dpesic.chronoscape.core.ModBlocks;
 import com.dpesic.chronoscape.tags.ChronoscapeBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 public abstract class AbstractMushroomItem extends Item {
@@ -21,6 +23,8 @@ public abstract class AbstractMushroomItem extends Item {
 
     protected abstract BlockState placeBlockstate(); // return ModBlocks.MY_ITEM.get().defaultBlockState();
 
+    protected abstract TagKey<Block> groundStateTag();
+
     @Override
     public InteractionResult useOn(UseOnContext ctx) {
         Level level = ctx.getLevel();
@@ -28,7 +32,7 @@ public abstract class AbstractMushroomItem extends Item {
 
         // On chronoscape:#fungi_ground
         BlockState groundState = level.getBlockState(groundPos);
-        if (!groundState.is(ChronoscapeBlockTags.FUNGI_GROUND)) {
+        if (!groundState.is(groundStateTag())) {
             return InteractionResult.PASS;
         }
 
@@ -50,7 +54,13 @@ public abstract class AbstractMushroomItem extends Item {
                 return InteractionResult.PASS;
             }
 
-            level.setBlock(placePos, plantState, 3);
+            if (groundState.is(ModBlocks.ROTWOOD)) {
+                level.setBlock(placePos, ModBlocks.NECROSHROOM_FUNGUS.get().defaultBlockState(), 3);
+            }
+            else {
+                level.setBlock(placePos, plantState, 3);
+            }
+
             level.playSound(null, placePos, SoundEvents.ROOTS_PLACE, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             ItemStack stack = ctx.getItemInHand();
             if (ctx.getPlayer() == null || !ctx.getPlayer().getAbilities().instabuild) {

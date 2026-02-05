@@ -2,6 +2,4 @@
 
 ### Things to be retextured:
 
--  Necroshroom Item
-- Necroshroom Growth Stages
-- Fungal Substrate
+- Rotwood
