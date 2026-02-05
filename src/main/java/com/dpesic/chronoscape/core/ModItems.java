@@ -64,4 +64,10 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final DeferredItem<BlockItem> ROTWOOD_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
+            "rotwood",
+            ModBlocks.ROTWOOD,
+            new Item.Properties()
+    );
+
 }

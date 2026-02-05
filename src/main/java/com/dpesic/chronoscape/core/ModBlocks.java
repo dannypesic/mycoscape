@@ -8,6 +8,7 @@ import com.dpesic.chronoscape.block.NecroshroomFungusBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -60,6 +61,14 @@ public class ModBlocks {
                     .randomTicks()
                     .instabreak()
                     .sound(SoundType.ROOTS)
+    );
+
+    @SuppressWarnings("removal")
+    public static final DeferredBlock<RotatedPillarBlock> ROTWOOD = BLOCKS.registerBlock(
+            "rotwood",
+            RotatedPillarBlock::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.MANGROVE_ROOTS)
     );
 
     @SuppressWarnings("removal")

@@ -74,6 +74,11 @@ public class Chronoscape {
                     new ItemStack(ModItems.FUNGAL_SUBSTRATE_BLOCK_ITEM.get()),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
             );
+            event.insertAfter(
+                    new ItemStack(ModItems.FUNGAL_SUBSTRATE_BLOCK_ITEM.get()),
+                    new ItemStack(ModItems.ROTWOOD_BLOCK_ITEM.get()),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
 
 
         }

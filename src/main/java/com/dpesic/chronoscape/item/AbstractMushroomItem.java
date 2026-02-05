@@ -1,5 +1,7 @@
 package com.dpesic.chronoscape.item;
 
+import com.dpesic.chronoscape.tags.ChronoscapeBlockTags;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -24,9 +26,9 @@ public abstract class AbstractMushroomItem extends Item {
         Level level = ctx.getLevel();
         BlockPos groundPos = ctx.getClickedPos();
 
-        // On #dirt
+        // On chronoscape:#fungi_ground
         BlockState groundState = level.getBlockState(groundPos);
-        if (!groundState.is(BlockTags.DIRT)) {
+        if (!groundState.is(ChronoscapeBlockTags.FUNGI_GROUND)) {
             return InteractionResult.PASS;
         }
 

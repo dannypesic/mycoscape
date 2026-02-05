@@ -27,5 +27,5 @@ public class NecroshroomFungusBlock extends AbstractFungusBlock {
         return Block.column(14.0D, 0.0D, 10.0D);
     }
 
-
+    //make me work only on rotwood!
 }

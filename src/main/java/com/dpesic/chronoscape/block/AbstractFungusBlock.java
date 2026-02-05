@@ -1,5 +1,7 @@
 package com.dpesic.chronoscape.block;
 
+import com.dpesic.chronoscape.tags.ChronoscapeBlockTags;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -87,7 +89,7 @@ public abstract class AbstractFungusBlock extends BushBlock { // BushBlock exten
 
     @Override
     protected boolean mayPlaceOn(BlockState below, BlockGetter level, BlockPos pos) {
-        return below.is(BlockTags.DIRT);
+        return below.is(ChronoscapeBlockTags.FUNGI_GROUND);
     }
 
     @Override
