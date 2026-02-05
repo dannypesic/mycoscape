@@ -69,6 +69,9 @@ public class ModBlocks {
             RotatedPillarBlock::new,
             BlockBehaviour.Properties.of()
                     .sound(SoundType.MANGROVE_ROOTS)
+                    .destroyTime(0.5f)
+                    .explosionResistance(0.5f)
+
     );
 
     @SuppressWarnings("removal")
@@ -76,6 +79,8 @@ public class ModBlocks {
             "fungal_substrate",
             BlockBehaviour.Properties.of()
                     .sound(SoundType.MUDDY_MANGROVE_ROOTS)
+                    .destroyTime(0.5f)
+                    .explosionResistance(0.5f)
     );
 
 };
