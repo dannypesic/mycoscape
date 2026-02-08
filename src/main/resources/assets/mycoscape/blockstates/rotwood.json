@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mycoscape:block/rotwood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "mycoscape:block/rotwood"
+    },
+    "axis=z": {
+      "model": "mycoscape:block/rotwood_horizontal",
+      "x": 90
+    }
+  }
+}

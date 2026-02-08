@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" L ", "LAL", " L "],
+  "key": {
+    "L": "minecraft:redstone",
+    "A": "minecraft:copper_ingot"
+  },
+  "result": {
+    "id": "mycoscape:enriched_alloy",
+    "count": 1
+  }
+}

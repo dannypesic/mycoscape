@@ -15,13 +15,13 @@ license="MIT"
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="chronoscape" #mandatory
+modId="mycoscape" #mandatory
 
 # The version number of the mod
 version="0.1.0" #mandatory
 
 # A display name for the mod
-displayName="Chronoscape}" #mandatory
+displayName="Mycoscape" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional

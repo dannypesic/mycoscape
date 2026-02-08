@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "chronoscape:block/rotwood_top",
-    "side": "chronoscape:block/rotwood"
-  }
-}

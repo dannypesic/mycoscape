@@ -1,0 +1,21 @@
+{
+  "itemGroup.mycoscape": "mycoscape",
+  "item.mycoscape.imbued_shard": "Imbued Shard",
+  "item.mycoscape.blewit": "Blewit",
+  "item.mycoscape.morel": "Morel",
+  "item.mycoscape.jack_o_lantern_mushroom": "Jack o'Lantern Mushroom",
+  "item.mycoscape.necroshroom": "Necroshroom",
+  "item.mycoscape.enriched_alloy": "Enriched Alloy",
+
+  "block.mycoscape.fungal_substrate": "Fungal Substrate",
+  "block.mycoscape.rotwood": "Rotwood",
+  "block.mycoscape.fungal_conduit": "Fungal Conduit",
+
+  "mycoscape.configuration.title": "mycoscape Configs",
+  "mycoscape.configuration.section.mycoscape.common.toml": "mycoscape Configs",
+  "mycoscape.configuration.section.mycoscape.common.toml.title": "mycoscape Configs",
+  "mycoscape.configuration.items": "Item List",
+  "mycoscape.configuration.logDirtBlock": "Log Dirt Block",
+  "mycoscape.configuration.magicNumberIntroduction": "Magic Number Text",
+  "mycoscape.configuration.magicNumber": "Magic Number"
+}

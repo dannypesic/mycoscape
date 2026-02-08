@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mycoscape:block/rotwood_top",
+    "side": "mycoscape:block/rotwood"
+  }
+}

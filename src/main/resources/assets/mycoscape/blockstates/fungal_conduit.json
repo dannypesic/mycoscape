@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=west": {
+      "model": "mycoscape:block/fungal_conduit",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mycoscape:block/fungal_conduit"
+    },
+
+    "facing=north": {
+      "model": "mycoscape:block/fungal_conduit",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "mycoscape:block/fungal_conduit",
+      "y": 270
+    }
+  }
+}

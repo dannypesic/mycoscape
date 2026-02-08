@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "render_type": "cutout",
-  "textures": {
-    "cross": "chronoscape:block/jack_o_lantern_fungus_stage0"
-  }
-}

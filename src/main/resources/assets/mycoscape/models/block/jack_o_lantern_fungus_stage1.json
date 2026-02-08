@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "cutout",
+  "textures": {
+    "cross": "mycoscape:block/jack_o_lantern_fungus_stage1"
+  }
+}
