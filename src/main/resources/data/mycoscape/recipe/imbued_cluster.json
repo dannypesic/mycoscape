@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "mycoscape:imbued_shard",
+    "mycoscape:imbued_shard",
+    "mycoscape:imbued_shard",
+    "minecraft:diamond"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mycoscape:imbued_cluster"
+  }
+}
