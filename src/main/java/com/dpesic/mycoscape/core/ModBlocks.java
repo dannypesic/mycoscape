@@ -80,6 +80,17 @@ public class ModBlocks {
     );
 
     @SuppressWarnings("removal")
+    public static final DeferredBlock<ClusterBlock> IMBUED_CLUSTER = BLOCKS.registerBlock(
+            "imbued_cluster",
+            ClusterBlock::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.AMETHYST_CLUSTER)
+                    .destroyTime(1.5f)
+                    .explosionResistance(1.5f)
+
+    );
+
+    @SuppressWarnings("removal")
     public static final DeferredBlock<Block> FUNGAL_SUBSTRATE = BLOCKS.registerSimpleBlock(
             "fungal_substrate",
             BlockBehaviour.Properties.of()
