@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "mycoscape:item/depleted_shard"
+  }
+}

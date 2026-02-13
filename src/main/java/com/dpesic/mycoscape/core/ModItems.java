@@ -23,6 +23,10 @@ public class ModItems {
             "imbued_shard"
     );
 
+    public static final DeferredItem<Item> DEPLETED_SHARD = ITEMS.registerSimpleItem(
+            "depleted_shard"
+    );
+
     public static final DeferredItem<Item> ENRICHED_ALLOY = ITEMS.registerSimpleItem(
             "enriched_alloy"
     );
@@ -82,6 +86,13 @@ public class ModItems {
     public static final DeferredItem<BlockItem> IMBUED_CLUSTER_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
             "imbued_cluster",
             ModBlocks.IMBUED_CLUSTER,
+            new Item.Properties()
+    );
+
+    @SuppressWarnings("removal")
+    public static final DeferredItem<BlockItem> DEPLETED_CLUSTER_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
+            "depleted_cluster",
+            ModBlocks.DEPLETED_CLUSTER,
             new Item.Properties()
     );
 

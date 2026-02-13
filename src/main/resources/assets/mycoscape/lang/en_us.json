@@ -1,6 +1,7 @@
 {
   "itemGroup.mycoscape": "mycoscape",
   "item.mycoscape.imbued_shard": "Imbued Shard",
+  "item.mycoscape.depleted_shard": "Depleted Shard",
   "item.mycoscape.blewit": "Blewit",
   "item.mycoscape.morel": "Morel",
   "item.mycoscape.jack_o_lantern_mushroom": "Jack o'Lantern Mushroom",
@@ -11,6 +12,7 @@
   "block.mycoscape.rotwood": "Rotwood",
   "block.mycoscape.fungal_conduit": "Fungal Conduit",
   "block.mycoscape.imbued_cluster": "Imbued Cluster",
+  "block.mycoscape.depleted_cluster": "Depleted Cluster",
 
   "mycoscape.configuration.title": "mycoscape Configs",
   "mycoscape.configuration.section.mycoscape.common.toml": "mycoscape Configs",
