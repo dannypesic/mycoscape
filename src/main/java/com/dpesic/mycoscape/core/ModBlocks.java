@@ -62,7 +62,7 @@ public class ModBlocks {
             "fungal_conduit",
             FungalConduitBlock::new,
             BlockBehaviour.Properties.of()
-                    .sound(SoundType.SCULK_SENSOR)
+                    .sound(SoundType.ANCIENT_DEBRIS)
                     .destroyTime(0.2f)
                     .explosionResistance(0.5f)
 
@@ -76,6 +76,28 @@ public class ModBlocks {
                     .sound(SoundType.MANGROVE_ROOTS)
                     .destroyTime(0.5f)
                     .explosionResistance(0.5f)
+
+    );
+
+    @SuppressWarnings("removal")
+    public static final DeferredBlock<ClusterBlock> IMBUED_CLUSTER = BLOCKS.registerBlock(
+            "imbued_cluster",
+            ClusterBlock::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.AMETHYST_CLUSTER)
+                    .destroyTime(1.5f)
+                    .explosionResistance(1.5f)
+
+    );
+
+    @SuppressWarnings("removal")
+    public static final DeferredBlock<ClusterBlock> DEPLETED_CLUSTER = BLOCKS.registerBlock(
+            "depleted_cluster",
+            ClusterBlock::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.AMETHYST_CLUSTER)
+                    .destroyTime(1.5f)
+                    .explosionResistance(1.5f)
 
     );
 

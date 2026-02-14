@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "key": {
+    "A": "mycoscape:imbued_shard",
+    "B": "mycoscape:fungal_substrate",
+    "C" : "mycoscape:enriched_alloy",
+    "D": "minecraft:comparator"
+  },
+  "pattern": [
+    "CAC",
+    "CBD",
+    "CBC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mycoscape:fungal_conduit"
+  }
+}

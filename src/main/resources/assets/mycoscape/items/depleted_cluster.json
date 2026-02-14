@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "mycoscape:item/imbued_cluster"
+    "model": "mycoscape:item/depleted_cluster"
   }
 }

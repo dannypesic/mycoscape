@@ -23,28 +23,36 @@ public class ModItems {
             "imbued_shard"
     );
 
+    public static final DeferredItem<Item> DEPLETED_SHARD = ITEMS.registerSimpleItem(
+            "depleted_shard"
+    );
+
     public static final DeferredItem<Item> ENRICHED_ALLOY = ITEMS.registerSimpleItem(
             "enriched_alloy"
     );
 
+    @SuppressWarnings("removal")
     public static final DeferredItem<BlewitItem> BLEWIT = ITEMS.registerItem(
             "blewit",
             BlewitItem::new,
             new Item.Properties()
     );
 
+    @SuppressWarnings("removal")
     public static final DeferredItem<MorelItem> MOREL = ITEMS.registerItem(
             "morel",
             MorelItem::new,
             new Item.Properties()
     );
 
+    @SuppressWarnings("removal")
     public static final DeferredItem<JackOLanternMushroomItem> JACK_O_LANTERN_MUSHROOM = ITEMS.registerItem(
             "jack_o_lantern_mushroom",
             JackOLanternMushroomItem::new,
             new Item.Properties()
     );
 
+    @SuppressWarnings("removal")
     public static final DeferredItem<NecroshroomItem> NECROSHROOM = ITEMS.registerItem(
             "necroshroom",
             NecroshroomItem::new,
@@ -53,21 +61,38 @@ public class ModItems {
 
 
     // Block Items
+    @SuppressWarnings("removal")
     public static final DeferredItem<BlockItem> FUNGAL_SUBSTRATE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
             "fungal_substrate",
             ModBlocks.FUNGAL_SUBSTRATE,
             new Item.Properties()
     );
 
+    @SuppressWarnings("removal")
     public static final DeferredItem<BlockItem> ROTWOOD_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
             "rotwood",
             ModBlocks.ROTWOOD,
             new Item.Properties()
     );
 
+    @SuppressWarnings("removal")
     public static final DeferredItem<BlockItem> FUNGAL_CONDUIT_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
             "fungal_conduit",
             ModBlocks.FUNGAL_CONDUIT,
+            new Item.Properties()
+    );
+
+    @SuppressWarnings("removal")
+    public static final DeferredItem<BlockItem> IMBUED_CLUSTER_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
+            "imbued_cluster",
+            ModBlocks.IMBUED_CLUSTER,
+            new Item.Properties()
+    );
+
+    @SuppressWarnings("removal")
+    public static final DeferredItem<BlockItem> DEPLETED_CLUSTER_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
+            "depleted_cluster",
+            ModBlocks.DEPLETED_CLUSTER,
             new Item.Properties()
     );
 
