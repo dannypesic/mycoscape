@@ -3,6 +3,9 @@ package com.dpesic.mycoscape.block;
 import com.dpesic.mycoscape.tags.MycoscapeBlockTags;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -10,6 +13,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -20,9 +24,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.Optional;
 
 public abstract class AbstractFungusBlock extends BushBlock { // BushBlock extends bonemealability of BoneMealableBlock
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 1);
@@ -31,6 +38,8 @@ public abstract class AbstractFungusBlock extends BushBlock { // BushBlock exten
     }
 
     public abstract ItemStack dropItemstack(); // return new ItemStack(ModItems.MY_ITEM.get(), dropCount);
+
+    protected abstract ResourceKey<ConfiguredFeature<?, ?>> getHugeMushroomFeature();
 
     protected abstract VoxelShape shapeMycelium(); // return Block.column(D, D, D);
 
@@ -85,6 +94,7 @@ public abstract class AbstractFungusBlock extends BushBlock { // BushBlock exten
     @Override
     public InteractionResult useItemOn(ItemStack held, BlockState state, Level level, BlockPos pos,
                                        Player player, InteractionHand hand, BlockHitResult hit) {
+        if (held.getItem() instanceof BoneMealItem) return InteractionResult.PASS;
         if (harvest(state, level, pos, player)){
             return InteractionResult.SUCCESS;
         }
@@ -104,17 +114,32 @@ public abstract class AbstractFungusBlock extends BushBlock { // BushBlock exten
 
     @Override
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
-        return state.getValue(AGE) < 1;
-    }
-
-    @Override
-    public boolean isBonemealSuccess(Level level, RandomSource rand, BlockPos pos, BlockState state) {
         return true;
     }
 
     @Override
+    public boolean isBonemealSuccess(Level level, RandomSource rand, BlockPos pos, BlockState state) {
+        if (state.getValue(AGE) < 1) return true;
+        return rand.nextFloat() < 0.4f;
+    }
+
+    @Override
     public void performBonemeal(ServerLevel level, RandomSource rand, BlockPos pos, BlockState state) {
-        level.setBlock(pos, state.setValue(AGE, 1), 2);
+        if (state.getValue(AGE) < 1) {
+            level.setBlock(pos, state.setValue(AGE, 1), 2);
+        } else {
+            growHugeMushroom(level, pos, state, rand);
+        }
+    }
+
+    private void growHugeMushroom(ServerLevel level, BlockPos pos, BlockState state, RandomSource rand) {
+        Optional<? extends Holder<ConfiguredFeature<?, ?>>> feature =
+                level.registryAccess().lookupOrThrow(Registries.CONFIGURED_FEATURE).get(getHugeMushroomFeature());
+        if (feature.isEmpty()) return;
+        level.removeBlock(pos, false);
+        if (!feature.get().value().place(level, level.getChunkSource().getGenerator(), rand, pos)) {
+            level.setBlock(pos, state, 3);
+        }
     }
 
 }

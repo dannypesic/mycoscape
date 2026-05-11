@@ -117,6 +117,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.MUSHROOM_GROW_BLOCK)
                 .add(ModBlocks.MYCOSLATE.get())
-                .add(ModBlocks.FUNGAL_SUBSTRATE.get());
+                .add(ModBlocks.FUNGAL_SUBSTRATE.get())
+                .addTag(MycoscapeBlockTags.ROTWOOD);
     }
 }

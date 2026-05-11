@@ -1,6 +1,7 @@
 {
   "values": [
     "mycoscape:mycoslate",
-    "mycoscape:fungal_substrate"
+    "mycoscape:fungal_substrate",
+    "#mycoscape:rotwood"
   ]
 }

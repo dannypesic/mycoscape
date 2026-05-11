@@ -4,10 +4,14 @@ import com.dpesic.mycoscape.core.ModBlocks;
 import com.dpesic.mycoscape.core.ModItems;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class NecroshroomFungusBlock extends AbstractFungusBlock {
@@ -35,5 +39,10 @@ public class NecroshroomFungusBlock extends AbstractFungusBlock {
     @Override
     protected boolean mayPlaceOn(BlockState below, BlockGetter level, BlockPos pos) {
         return below.is(ModBlocks.ROTWOOD);
+    }
+
+    @Override
+    protected ResourceKey<ConfiguredFeature<?, ?>> getHugeMushroomFeature() {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath("mycoscape", "necroshroom"));
     }
 }

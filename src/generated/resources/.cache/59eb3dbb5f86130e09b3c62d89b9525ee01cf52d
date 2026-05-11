@@ -1,10 +1,10 @@
-// 1.21.11	2026-05-11T11:59:55.842238	Loot Tables
-19ce663dd51562ac434e8b65c052d04a338ea70c data/mycoscape/loot_table/blocks/blewit_mushroom_cap.json
+// 1.21.11	2026-05-11T13:08:38.335082	Loot Tables
+8ba0ecb5d0c060e6ac4d47ca68ca6275cc1a0e43 data/mycoscape/loot_table/blocks/blewit_mushroom_cap.json
 fef3e0347ea20c6464e251f4d65ff57e49b2a25e data/mycoscape/loot_table/blocks/fungal_conduit.json
 d2ded892435e80034d985bcc256c6c246f9a32bc data/mycoscape/loot_table/blocks/fungal_substrate.json
-c2a08ae5cd917686173e4f7f773e3c7fec2f51b2 data/mycoscape/loot_table/blocks/jack_o_lantern_mushroom_cap.json
+2103e92618489d798d19eaa3c05753a885c1a580 data/mycoscape/loot_table/blocks/jack_o_lantern_mushroom_cap.json
 629e5ce76026123e4ab0ff9bdc2046d023d621ae data/mycoscape/loot_table/blocks/jack_o_lantern_vein.json
-9e45a7726ca774333e98c60c2333929e347e390a data/mycoscape/loot_table/blocks/morel_mushroom_cap.json
+e97cbb3e8ee2fe6f7997b47d1c3e0028f28ef72a data/mycoscape/loot_table/blocks/morel_mushroom_cap.json
 b597f7b1fc8be5a5c67061f710730ef3359a91d2 data/mycoscape/loot_table/blocks/mushroom_stem.json
 7365c374dc4441ab0d717ab1342ca5f4fd247ab7 data/mycoscape/loot_table/blocks/mycoslate.json
 cdfaa8e397cf300b0f9d1dbb8340e23afeee7f26 data/mycoscape/loot_table/blocks/necroshroom_cap.json

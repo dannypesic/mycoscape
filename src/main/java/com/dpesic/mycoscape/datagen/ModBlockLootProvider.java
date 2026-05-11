@@ -1,6 +1,7 @@
 package com.dpesic.mycoscape.datagen;
 
 import com.dpesic.mycoscape.core.ModBlocks;
+import com.dpesic.mycoscape.core.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.flag.FeatureFlags;
@@ -47,10 +48,10 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
         dropSelf(ModBlocks.ROTWOOD_BUTTON.get());
         dropSelf(ModBlocks.ROTWOOD_PRESSURE_PLATE.get());
 
-        // Big mushroom caps
-        dropSelf(ModBlocks.BLEWIT_MUSHROOM_CAP.get());
-        dropSelf(ModBlocks.MOREL_MUSHROOM_CAP.get());
-        dropSelf(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get());
+        // Big mushroom caps — silk touch drops the block, otherwise chance to drop mushroom item
+        add(ModBlocks.BLEWIT_MUSHROOM_CAP.get(), createMushroomBlockDrop(ModBlocks.BLEWIT_MUSHROOM_CAP.get(), ModItems.BLEWIT.get()));
+        add(ModBlocks.MOREL_MUSHROOM_CAP.get(), createMushroomBlockDrop(ModBlocks.MOREL_MUSHROOM_CAP.get(), ModItems.MOREL.get()));
+        add(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get(), createMushroomBlockDrop(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get(), ModItems.JACK_O_LANTERN_MUSHROOM.get()));
         dropSelf(ModBlocks.NECROSHROOM_CAP.get());
         dropSelf(ModBlocks.MUSHROOM_STEM.get());
     }

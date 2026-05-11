@@ -1,4 +1,4 @@
-// 1.21.11	2026-05-11T12:44:20.474	Tags for minecraft:block mod id mycoscape
+// 1.21.11	2026-05-11T13:27:04.590944	Tags for minecraft:block mod id mycoscape
 b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/deepslate_ore_replaceables.json
 ee895e04815c320f3760ecf67628a8bd746f3b14 data/minecraft/tags/block/fence_gates.json
 9b94d899542ee081dff78b1d5cf3171a783ba8df data/minecraft/tags/block/leaves.json
@@ -7,7 +7,7 @@ c3b21432c1afc124c5b9fe137f5700cdef83ba04 data/minecraft/tags/block/mineable/axe.
 dd0d65201cbd9eb74acb2c8849c78d7206af0daf data/minecraft/tags/block/mineable/hoe.json
 b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/mineable/pickaxe.json
 fa899419a82395cd4da6bc8a8f7e540c7c3e86af data/minecraft/tags/block/mineable/shovel.json
-720ba45b38866cb8c98468be66f4eafaa301c7c5 data/minecraft/tags/block/mushroom_grow_block.json
+0c3a81c758d67ab92750c8a4b40da9e34d1d5450 data/minecraft/tags/block/mushroom_grow_block.json
 b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/needs_stone_tool.json
 30aea22538edfafc726464701e1bb23ff6223ee9 data/minecraft/tags/block/planks.json
 b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/stone_ore_replaceables.json

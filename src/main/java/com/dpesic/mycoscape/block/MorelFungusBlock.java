@@ -1,8 +1,12 @@
 package com.dpesic.mycoscape.block;
 
 import com.dpesic.mycoscape.core.ModItems;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class MorelFungusBlock extends AbstractFungusBlock {
@@ -27,5 +31,9 @@ public class MorelFungusBlock extends AbstractFungusBlock {
         return Block.column(14.0D, 0.0D, 15.0D);
     }
 
+    @Override
+    protected ResourceKey<ConfiguredFeature<?, ?>> getHugeMushroomFeature() {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath("mycoscape", "morel_mushroom"));
+    }
 
 }
