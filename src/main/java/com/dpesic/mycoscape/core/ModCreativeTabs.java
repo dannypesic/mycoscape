@@ -36,6 +36,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.NECROSHROOM_CAP_ITEM.get());
                         output.accept(ModItems.MUSHROOM_STEM_ITEM.get());
 
+                        output.accept(ModItems.ROTWOOD_SAPLING_ITEM.get());
                         output.accept(ModItems.ROTWOOD_LEAVES_ITEM.get());
                         output.accept(ModItems.ROTWOOD_ITEM.get());
                         output.accept(ModItems.STRIPPED_ROTWOOD_LOG_ITEM.get());
@@ -55,8 +56,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.MYCOSLATE_ITEM.get());
                         output.accept(ModItems.NECROSHROOM_HYPHAE_ITEM.get());
                         output.accept(ModItems.JACK_O_LANTERN_VEIN_ITEM.get());
-                        output.accept(ModItems.FUNGAL_CONDUIT_ITEM.get());
-                        output.accept(ModItems.DEATH_VINE_ITEM.get());
+output.accept(ModItems.DEATH_VINE_ITEM.get());
                     })
                     .build());
 }

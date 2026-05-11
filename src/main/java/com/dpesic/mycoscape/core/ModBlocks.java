@@ -2,12 +2,17 @@ package com.dpesic.mycoscape.core;
 
 import com.dpesic.mycoscape.block.*;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
+import java.util.Optional;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.SoundType;
@@ -275,6 +280,28 @@ public class ModBlocks {
             )
     );
 
+    private static final ResourceKey<ConfiguredFeature<?, ?>> ROTWOOD_TREE_CF =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE,
+                    Identifier.fromNamespaceAndPath(Mycoscape.MODID, "rotwood_tree"));
+
+    public static final TreeGrower ROTWOOD_TREE_GROWER = new TreeGrower(
+            "rotwood", Optional.empty(), Optional.of(ROTWOOD_TREE_CF), Optional.empty());
+
+    public static final DeferredHolder<Block, SaplingBlock> ROTWOOD_SAPLING = BLOCKS.register(
+            "rotwood_sapling",
+            rn -> new SaplingBlock(
+                    ROTWOOD_TREE_GROWER,
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, rn))
+                            .mapColor(MapColor.PLANT)
+                            .noCollision()
+                            .randomTicks()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .pushReaction(PushReaction.DESTROY)
+            )
+    );
+
     public static final DeferredHolder<Block, TintedParticleLeavesBlock> ROTWOOD_LEAVES = BLOCKS.register(
             "rotwood_leaves",
             rn -> new TintedParticleLeavesBlock(
@@ -350,16 +377,4 @@ public class ModBlocks {
             )
     );
 
-    
-
-    public static final DeferredHolder<Block, FungalConduitBlock> FUNGAL_CONDUIT = BLOCKS.register(
-            "fungal_conduit",
-            rn -> new FungalConduitBlock(
-                    BlockBehaviour.Properties.of()
-                            .setId(ResourceKey.create(Registries.BLOCK, rn))
-                            .sound(SoundType.ANCIENT_DEBRIS)
-                            .destroyTime(0.2f)
-                            .explosionResistance(0.5f)
-            )
-    );
 }

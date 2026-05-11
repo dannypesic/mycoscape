@@ -23,9 +23,8 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
         dropSelf(ModBlocks.FUNGAL_SUBSTRATE.get());
         dropSelf(ModBlocks.MYCOSLATE.get());
         dropSelf(ModBlocks.JACK_O_LANTERN_VEIN.get());
-        dropSelf(ModBlocks.FUNGAL_CONDUIT.get());
 
-        
+
         add(ModBlocks.NECROSHROOM_HYPHAE.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.NECROSHROOM_HYPHAE.get()));
 
         
@@ -33,6 +32,7 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
 
         
         add(ModBlocks.ROTWOOD_LEAVES.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.ROTWOOD_LEAVES.get()));
+        dropSelf(ModBlocks.ROTWOOD_SAPLING.get());
 
         
         dropSelf(ModBlocks.ROTWOOD.get());

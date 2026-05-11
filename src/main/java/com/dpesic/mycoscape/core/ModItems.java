@@ -165,6 +165,9 @@ public class ModItems {
 
     
 
+    public static final DeferredHolder<Item, BlockItem> ROTWOOD_SAPLING_ITEM =
+            registerBlockItem("rotwood_sapling", ModBlocks.ROTWOOD_SAPLING);
+
     public static final DeferredHolder<Item, BlockItem> ROTWOOD_LEAVES_ITEM =
             registerBlockItem("rotwood_leaves", ModBlocks.ROTWOOD_LEAVES);
 
@@ -220,9 +223,6 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BlockItem> JACK_O_LANTERN_VEIN_ITEM =
             registerBlockItem("jack_o_lantern_vein", ModBlocks.JACK_O_LANTERN_VEIN);
-
-    public static final DeferredHolder<Item, BlockItem> FUNGAL_CONDUIT_ITEM =
-            registerBlockItem("fungal_conduit", ModBlocks.FUNGAL_CONDUIT);
 
     public static final DeferredHolder<Item, BlockItem> DEATH_VINE_ITEM =
             registerBlockItem("death_vine", ModBlocks.DEATH_VINE);

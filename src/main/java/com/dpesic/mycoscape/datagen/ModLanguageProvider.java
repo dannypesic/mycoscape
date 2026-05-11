@@ -43,6 +43,7 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.NECROSHROOM_CAP_ITEM,             "Necroshroom Cap");
         addItem(ModItems.MUSHROOM_STEM_ITEM,               "Mushroom Stem");
 
+        addBlock(ModBlocks.ROTWOOD_SAPLING,         "Rotwood Sapling");
         addBlock(ModBlocks.ROTWOOD_LEAVES,          "Rotwood Leaves");
         addBlock(ModBlocks.ROTWOOD,                 "Rotwood Log");
         addBlock(ModBlocks.STRIPPED_ROTWOOD_LOG,    "Stripped Rotwood Log");
@@ -57,6 +58,7 @@ public class ModLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.ROTWOOD_TRAPDOOR,        "Rotwood Trapdoor");
         addBlock(ModBlocks.ROTWOOD_BUTTON,          "Rotwood Button");
         addBlock(ModBlocks.ROTWOOD_PRESSURE_PLATE,  "Rotwood Pressure Plate");
+        addItem(ModItems.ROTWOOD_SAPLING_ITEM,          "Rotwood Sapling");
         addItem(ModItems.ROTWOOD_LEAVES_ITEM,           "Rotwood Leaves");
         addItem(ModItems.ROTWOOD_ITEM,                  "Rotwood Log");
         addItem(ModItems.STRIPPED_ROTWOOD_LOG_ITEM,     "Stripped Rotwood Log");
@@ -76,13 +78,11 @@ public class ModLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.MYCOSLATE,               "Mycoslate");
         addBlock(ModBlocks.NECROSHROOM_HYPHAE,      "Necroshroom Hyphae");
         addBlock(ModBlocks.JACK_O_LANTERN_VEIN,     "Jack o'Lantern Vein");
-        addBlock(ModBlocks.FUNGAL_CONDUIT,          "Fungal Conduit");
-        addBlock(ModBlocks.DEATH_VINE,              "Death Vine");
+addBlock(ModBlocks.DEATH_VINE,              "Death Vine");
         addItem(ModItems.FUNGAL_SUBSTRATE_ITEM,     "Fungal Substrate");
         addItem(ModItems.MYCOSLATE_ITEM,            "Mycoslate");
         addItem(ModItems.NECROSHROOM_HYPHAE_ITEM,   "Necroshroom Hyphae");
         addItem(ModItems.JACK_O_LANTERN_VEIN_ITEM,  "Jack o'Lantern Vein");
-        addItem(ModItems.FUNGAL_CONDUIT_ITEM,       "Fungal Conduit");
         addItem(ModItems.DEATH_VINE_ITEM,           "Death Vine");
 
         

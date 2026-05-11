@@ -18,7 +18,7 @@ license="MIT"
 modId="mycoscape" #mandatory
 
 # The version number of the mod
-version="0.1.0" #mandatory
+version="1.0.0" #mandatory
 
 # A display name for the mod
 displayName="Mycoscape" #mandatory
@@ -40,7 +40,7 @@ displayName="Mycoscape" #mandatory
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Something that doesn't exist yet...
+A vanilla+ mod adding more mushroom related content.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.

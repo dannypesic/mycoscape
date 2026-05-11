@@ -149,20 +149,19 @@ public class ModModelProvider implements DataProvider {
         bmg.createTrivialCube(ModBlocks.NECROSHROOM_CAP.get());
         bmg.createTrivialCube(ModBlocks.MUSHROOM_STEM.get());
 
-        
-        conduitBlock(ModBlocks.FUNGAL_CONDUIT.get(), bsOutput);
-
-        
         fungusBlock(ModBlocks.BLEWIT_FUNGUS.get(), bsOutput, modelOutput);
         fungusBlock(ModBlocks.MOREL_FUNGUS.get(), bsOutput, modelOutput);
         fungusBlock(ModBlocks.JACK_O_LANTERN_FUNGUS.get(), bsOutput, modelOutput);
         fungusBlock(ModBlocks.NECROSHROOM_FUNGUS.get(), bsOutput, modelOutput);
 
-        
+
         hyphaeBlock(ModBlocks.NECROSHROOM_HYPHAE.get(), bsOutput, modelOutput);
 
-        
+
         hyphaeBlock(ModBlocks.DEATH_VINE.get(), bsOutput, modelOutput);
+
+
+        saplingBlock(ModBlocks.ROTWOOD_SAPLING.get(), bsOutput, modelOutput, itemOutput);
     }
 
     
@@ -440,11 +439,6 @@ public class ModModelProvider implements DataProvider {
         blockItem(ModItems.ROTWOOD_LEAVES_ITEM.get(), block, itemOutput);
     }
 
-    private void conduitBlock(Block block, Consumer<BlockModelDefinitionGenerator> bsOutput) {
-        Identifier modelId = Identifier.fromNamespaceAndPath(Mycoscape.MODID, "block/fungal_conduit");
-        bsOutput.accept(MultiVariantGenerator.dispatch(block, mv(modelId)));
-    }
-
     private void fungusBlock(Block block,
                               Consumer<BlockModelDefinitionGenerator> bsOutput,
                               BiConsumer<Identifier, ModelInstance> modelOutput) {
@@ -477,6 +471,28 @@ public class ModModelProvider implements DataProvider {
             return json;
         });
         bsOutput.accept(MultiVariantGenerator.dispatch(block, mv(modelId)));
+    }
+
+    private void saplingBlock(Block block,
+                              Consumer<BlockModelDefinitionGenerator> bsOutput,
+                              BiConsumer<Identifier, ModelInstance> modelOutput,
+                              ItemModelOutput itemOutput) {
+        Identifier modelId = ModelLocationUtils.getModelLocation(block);
+        modelOutput.accept(modelId, () -> {
+            JsonObject json = new JsonObject();
+            json.addProperty("parent", "minecraft:block/cross");
+            json.addProperty("render_type", "minecraft:cutout");
+            JsonObject textures = new JsonObject();
+            textures.addProperty("cross", TextureMapping.getBlockTexture(block).toString());
+            json.add("textures", textures);
+            return json;
+        });
+        bsOutput.accept(MultiVariantGenerator.dispatch(block, mv(modelId)));
+        Identifier flatModelId = ModelTemplates.FLAT_ITEM.create(
+                ModItems.ROTWOOD_SAPLING_ITEM.get(),
+                TextureMapping.layer0(block),
+                modelOutput);
+        itemOutput.accept(ModItems.ROTWOOD_SAPLING_ITEM.get(), ItemModelUtils.plainModel(flatModelId));
     }
 
     private void cutoutCrossModel(Identifier modelId, Identifier crossTexture,
@@ -526,7 +542,6 @@ public class ModModelProvider implements DataProvider {
         blockItem(ModItems.MYCOSLATE_ITEM.get(), ModBlocks.MYCOSLATE.get(), itemOutput);
         blockItem(ModItems.NECROSHROOM_HYPHAE_ITEM.get(), ModBlocks.NECROSHROOM_HYPHAE.get(), itemOutput);
         blockItem(ModItems.JACK_O_LANTERN_VEIN_ITEM.get(), ModBlocks.JACK_O_LANTERN_VEIN.get(), itemOutput);
-        blockItem(ModItems.FUNGAL_CONDUIT_ITEM.get(), ModBlocks.FUNGAL_CONDUIT.get(), itemOutput);
         blockItem(ModItems.DEATH_VINE_ITEM.get(), ModBlocks.DEATH_VINE.get(), itemOutput);
 
         

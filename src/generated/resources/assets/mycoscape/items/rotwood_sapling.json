@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "mycoscape:block/fungal_conduit"
+    "model": "mycoscape:item/rotwood_sapling"
   }
 }

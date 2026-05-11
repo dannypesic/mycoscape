@@ -23,7 +23,7 @@ A NeoForge 1.21.11 Minecraft mod, forked from the legacy Mycoscape tech project,
 - [ ] New item textures: Mycelium Fabric, Death Vine, dried mushroom variants
 - [x] Rotwood door and trapdoor texture polish
 
-- [ ] Fungal conduit to sapling
+- [x] Fungal conduit to sapling
 - [x] Translation
 
 ### Release prep
@@ -58,6 +58,7 @@ block
 - [] rw leaves
 - [] rw planks
 - [] rw pressure plate
+- [] rw sapling
 - [] rwside
 - [] rw slab
 - [] rw stairs

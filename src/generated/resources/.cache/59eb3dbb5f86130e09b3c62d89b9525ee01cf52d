@@ -1,7 +1,6 @@
-// 1.21.11	2026-05-11T13:33:04.283378	Loot Tables
+// 1.21.11	2026-05-11T14:22:39.384796	Loot Tables
 8ba0ecb5d0c060e6ac4d47ca68ca6275cc1a0e43 data/mycoscape/loot_table/blocks/blewit_mushroom_cap.json
 18ea351b352565b58a40d0662cf27c4180793a5f data/mycoscape/loot_table/blocks/death_vine.json
-fef3e0347ea20c6464e251f4d65ff57e49b2a25e data/mycoscape/loot_table/blocks/fungal_conduit.json
 d2ded892435e80034d985bcc256c6c246f9a32bc data/mycoscape/loot_table/blocks/fungal_substrate.json
 2103e92618489d798d19eaa3c05753a885c1a580 data/mycoscape/loot_table/blocks/jack_o_lantern_mushroom_cap.json
 629e5ce76026123e4ab0ff9bdc2046d023d621ae data/mycoscape/loot_table/blocks/jack_o_lantern_vein.json
@@ -18,6 +17,7 @@ fc9acb4fce04529b0ee22ff08bb53cee307942ac data/mycoscape/loot_table/blocks/rotwoo
 95f456a9765c5971559e1b4a371d04d043b3a29d data/mycoscape/loot_table/blocks/rotwood_leaves.json
 739b894698364e4041bb072b57f12cee32829d06 data/mycoscape/loot_table/blocks/rotwood_planks.json
 d3f904a80024cc684571d24181c90659b19a9a01 data/mycoscape/loot_table/blocks/rotwood_pressure_plate.json
+f200b513870e1e7b8c5781c43714a77d4767a9a7 data/mycoscape/loot_table/blocks/rotwood_sapling.json
 39e18614625c854ed30562a609be53879b61fc48 data/mycoscape/loot_table/blocks/rotwood_slab.json
 bfdce4f496fd66c6c59642c7d2b2c9d14dd3bb40 data/mycoscape/loot_table/blocks/rotwood_stairs.json
 7006ba0a0b5beb2ac68bdd421277ab2906fee12b data/mycoscape/loot_table/blocks/rotwood_trapdoor.json
