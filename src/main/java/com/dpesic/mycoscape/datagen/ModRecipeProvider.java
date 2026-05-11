@@ -135,6 +135,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_mycelium_fabric", has(ModItems.MYCELIUM_FABRIC.get()))
                 .save(output, "white_wool_from_mycelium_fabric");
 
+        // ---- Death Vine -----------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ModItems.DEATH_VINE_ITEM.get())
+                .requires(ModItems.NECROSHROOM.get())
+                .requires(ModItems.MYCELIUM_FABRIC.get())
+                .unlockedBy("has_necroshroom", has(ModItems.NECROSHROOM.get()))
+                .save(output, "death_vine");
+
         // ---- Fungal substrate -----------------------------------------------
         ShapedRecipeBuilder.shaped(items, RecipeCategory.MISC, ModItems.FUNGAL_SUBSTRATE_ITEM.get())
                 .define('A', Items.BROWN_MUSHROOM)

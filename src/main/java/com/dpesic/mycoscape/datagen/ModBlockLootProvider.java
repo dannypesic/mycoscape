@@ -28,6 +28,9 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
         // Hyphae: shears or silk touch only
         add(ModBlocks.NECROSHROOM_HYPHAE.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.NECROSHROOM_HYPHAE.get()));
 
+        // Death Vine: shears or silk touch only
+        add(ModBlocks.DEATH_VINE.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.DEATH_VINE.get()));
+
         // Rotwood leaves (shears or silk touch only — no sapling)
         add(ModBlocks.ROTWOOD_LEAVES.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.ROTWOOD_LEAVES.get()));
 

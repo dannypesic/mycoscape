@@ -51,6 +51,7 @@ public class ModLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.NECROSHROOM_HYPHAE,      "Necroshroom Hyphae");
         addBlock(ModBlocks.JACK_O_LANTERN_VEIN,     "Jack o'Lantern Vein");
         addBlock(ModBlocks.FUNGAL_CONDUIT,          "Fungal Conduit");
+        addBlock(ModBlocks.DEATH_VINE,              "Death Vine");
 
         // ---- Biomes ---------------------------------------------------------
         add("biome.mycoscape.mycoscape_surface", "Mycoscape");

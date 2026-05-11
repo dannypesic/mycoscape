@@ -1,6 +1,7 @@
-// 1.21.11	2026-05-11T12:57:06.343402	Mycoscape Model Definitions
+// 1.21.11	2026-05-11T13:33:04.284116	Mycoscape Model Definitions
 896ed3ca68b0127bbb0a99696427bccaca7f08ac assets/mycoscape/blockstates/blewit_fungus.json
 4c57dbf6eb7ea24c045f9a6b015e315fc754bbc5 assets/mycoscape/blockstates/blewit_mushroom_cap.json
+632087d67374e1aed7f03f0a110efea0e4d9b7fe assets/mycoscape/blockstates/death_vine.json
 227a6c9635e22edb7989e603c8c013e62b7d97df assets/mycoscape/blockstates/fungal_conduit.json
 1452fdb979f6f98d532bd9b35d4f56053a8d2300 assets/mycoscape/blockstates/fungal_substrate.json
 e3923deb56a5a4d9d206ae4b6d116a94173d3486 assets/mycoscape/blockstates/jack_o_lantern_fungus.json
@@ -29,6 +30,7 @@ a76acc64cdc14ea8ba24514f7ec55d1f219e0265 assets/mycoscape/blockstates/rotwood_wo
 1b0adda078847d877e3dfb8794c9e017faa50347 assets/mycoscape/blockstates/stripped_rotwood_wood.json
 551e2e98229c1787091482ce9e1294b950047c2f assets/mycoscape/items/blewit.json
 5e6b0132bc264bef8ebf324d500ac59a7289a896 assets/mycoscape/items/blewit_mushroom_cap.json
+df212184ff66a6c4bf39df00f71388c3daa5594e assets/mycoscape/items/death_vine.json
 5669a32b6a6072236adec80185e3a8c533d8eeb7 assets/mycoscape/items/fungal_conduit.json
 9d9d5fc9d0514464a5033a26cd0656076fe65122 assets/mycoscape/items/fungal_substrate.json
 77466604d36105a6237935e68ee5bd6f83c1a006 assets/mycoscape/items/jack_o_lantern_mushroom.json
@@ -59,6 +61,7 @@ d6481bebc3613ea0fec4640467f96bc4a817e7ac assets/mycoscape/items/rotwood_wood.jso
 232cbfe77551c50fd844e09cdbbb00aafdddadc2 assets/mycoscape/models/block/blewit_fungus_stage0.json
 dcd5511074d01ead08f257ab49a8005abc69fd6e assets/mycoscape/models/block/blewit_fungus_stage1.json
 efcafb9d373b8cf76ff2af23bf75b4816f550f97 assets/mycoscape/models/block/blewit_mushroom_cap.json
+5c715ca153dc892aa5120d9e39655571bc0bfbf1 assets/mycoscape/models/block/death_vine.json
 aa8f4d96335acedae1bebbbfcaa8fe8e6782ba9c assets/mycoscape/models/block/fungal_substrate.json
 f21ab0f74776aed94f79ca3c2d416f5b4e5b7bd6 assets/mycoscape/models/block/jack_o_lantern_fungus_stage0.json
 e4a5eebaaacaa0ddd4c8e9ad9c4176103fef8cbd assets/mycoscape/models/block/jack_o_lantern_fungus_stage1.json

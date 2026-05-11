@@ -337,6 +337,19 @@ public class ModBlocks {
             )
     );
 
+    // ---- Death Vine ---------------------------------------------------------
+
+    public static final DeferredHolder<Block, DeathVineBlock> DEATH_VINE = BLOCKS.register(
+            "death_vine",
+            rn -> new DeathVineBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, rn))
+                            .noCollision()
+                            .destroyTime(2.0f)
+                            .sound(SoundType.ROOTS)
+            )
+    );
+
     // ---- Fungal Conduit (kept registered but unused in world) ----------------
 
     public static final DeferredHolder<Block, FungalConduitBlock> FUNGAL_CONDUIT = BLOCKS.register(

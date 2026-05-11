@@ -53,7 +53,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         // ---- Hoe-mineable ---------------------------------------------------
         tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.NECROSHROOM_HYPHAE.get())
-                .add(ModBlocks.ROTWOOD_LEAVES.get());
+                .add(ModBlocks.ROTWOOD_LEAVES.get())
+                .add(ModBlocks.DEATH_VINE.get());
 
         // ---- Leaves ---------------------------------------------------------
         tag(BlockTags.LEAVES)

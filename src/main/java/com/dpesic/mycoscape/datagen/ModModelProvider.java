@@ -160,6 +160,9 @@ public class ModModelProvider implements DataProvider {
 
         // Necroshroom hyphae (cross)
         hyphaeBlock(ModBlocks.NECROSHROOM_HYPHAE.get(), bsOutput, modelOutput);
+
+        // Death Vine (cross)
+        hyphaeBlock(ModBlocks.DEATH_VINE.get(), bsOutput, modelOutput);
     }
 
     // ---- Rotwood processed wood helpers ------------------------------------
@@ -486,6 +489,7 @@ public class ModModelProvider implements DataProvider {
         blockItem(ModItems.NECROSHROOM_HYPHAE_ITEM.get(), ModBlocks.NECROSHROOM_HYPHAE.get(), itemOutput);
         blockItem(ModItems.JACK_O_LANTERN_VEIN_ITEM.get(), ModBlocks.JACK_O_LANTERN_VEIN.get(), itemOutput);
         blockItem(ModItems.FUNGAL_CONDUIT_ITEM.get(), ModBlocks.FUNGAL_CONDUIT.get(), itemOutput);
+        blockItem(ModItems.DEATH_VINE_ITEM.get(), ModBlocks.DEATH_VINE.get(), itemOutput);
 
         // Crafting materials
         flatItem(ModItems.MYCELIUM_FABRIC.get(), itemOutput, modelOutput);

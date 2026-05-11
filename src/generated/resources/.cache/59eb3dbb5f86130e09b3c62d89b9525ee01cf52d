@@ -1,5 +1,6 @@
-// 1.21.11	2026-05-11T13:08:38.335082	Loot Tables
+// 1.21.11	2026-05-11T13:33:04.283378	Loot Tables
 8ba0ecb5d0c060e6ac4d47ca68ca6275cc1a0e43 data/mycoscape/loot_table/blocks/blewit_mushroom_cap.json
+18ea351b352565b58a40d0662cf27c4180793a5f data/mycoscape/loot_table/blocks/death_vine.json
 fef3e0347ea20c6464e251f4d65ff57e49b2a25e data/mycoscape/loot_table/blocks/fungal_conduit.json
 d2ded892435e80034d985bcc256c6c246f9a32bc data/mycoscape/loot_table/blocks/fungal_substrate.json
 2103e92618489d798d19eaa3c05753a885c1a580 data/mycoscape/loot_table/blocks/jack_o_lantern_mushroom_cap.json

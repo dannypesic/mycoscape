@@ -148,4 +148,7 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BlockItem> FUNGAL_CONDUIT_ITEM =
             registerBlockItem("fungal_conduit", ModBlocks.FUNGAL_CONDUIT);
+
+    public static final DeferredHolder<Item, BlockItem> DEATH_VINE_ITEM =
+            registerBlockItem("death_vine", ModBlocks.DEATH_VINE);
 }

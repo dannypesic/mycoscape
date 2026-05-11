@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cross",
+  "gui_light": "front",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "mycoscape:block/death_vine"
+  }
+}
