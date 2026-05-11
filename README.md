@@ -32,8 +32,8 @@ A NeoForge 1.21.11 Minecraft mod, forked from the legacy Mycoscape tech project,
 - [x] Fungal Forest placed features wired into the biome generation settings (mushroom clusters, rotwood trees)
 - [x] Custom rotwood tree feature using the existing `WallVeinFeature`
 - [x] Surface biome containing primarily blewit trees with occasional morel trees
-- [ ] Jack o'Lantern mushrooms in the caves
-- [ ] Ground is fungal substrate
+- [x] Jack o'Lantern mushrooms in the caves
+- [x] Ground is fungal substrate
 - [ ] Ores in cave
 
 ### Release prep
