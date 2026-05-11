@@ -103,6 +103,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(MycoscapeBlockTags.MYCOSLATE)
                 .add(ModBlocks.MYCOSLATE.get());
 
+        // Allow vanilla and modded ores to replace mycoslate in mycoscape_caves
+        tag(BlockTags.STONE_ORE_REPLACEABLES)
+                .add(ModBlocks.MYCOSLATE.get());
+        tag(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
+                .add(ModBlocks.MYCOSLATE.get());
+
         tag(MycoscapeBlockTags.ROTWOOD)
                 .add(ModBlocks.ROTWOOD.get())
                 .add(ModBlocks.STRIPPED_ROTWOOD_LOG.get())

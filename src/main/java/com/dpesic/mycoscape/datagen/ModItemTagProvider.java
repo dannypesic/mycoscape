@@ -2,9 +2,11 @@ package com.dpesic.mycoscape.datagen;
 
 import com.dpesic.mycoscape.core.ModItems;
 import com.dpesic.mycoscape.core.Mycoscape;
+import com.dpesic.mycoscape.tags.MycoscapeItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.tags.ItemTags;import net.neoforged.neoforge.common.data.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
+import net.neoforged.neoforge.common.data.ItemTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -17,6 +19,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider registries) {
         // Rotwood wood item tags for crafting compatibility
+        tag(MycoscapeItemTags.CUSTOM_MUSHROOMS)
+                .add(ModItems.BLEWIT.get())
+                .add(ModItems.MOREL.get())
+                .add(ModItems.JACK_O_LANTERN_MUSHROOM.get())
+                .add(ModItems.NECROSHROOM.get());
+
         tag(ItemTags.LOGS_THAT_BURN)
                 .add(ModItems.ROTWOOD_ITEM.get())
                 .add(ModItems.STRIPPED_ROTWOOD_LOG_ITEM.get())

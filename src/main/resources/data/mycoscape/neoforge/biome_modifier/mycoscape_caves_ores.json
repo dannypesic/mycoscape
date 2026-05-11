@@ -1,0 +1,32 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "mycoscape:mycoscape_caves",
+  "features": [
+    "minecraft:ore_coal_upper",
+    "minecraft:ore_coal_lower",
+    "minecraft:ore_iron_upper",
+    "minecraft:ore_iron_middle",
+    "minecraft:ore_iron_small",
+    "minecraft:ore_gold",
+    "minecraft:ore_gold_lower",
+    "minecraft:ore_redstone",
+    "minecraft:ore_redstone_lower",
+    "minecraft:ore_diamond",
+    "minecraft:ore_diamond_medium",
+    "minecraft:ore_diamond_large",
+    "minecraft:ore_diamond_buried",
+    "minecraft:ore_lapis",
+    "minecraft:ore_lapis_buried",
+    "minecraft:ore_copper_large",
+    "mycoscape:ore_coal_upper_bonus",
+    "mycoscape:ore_coal_lower_bonus",
+    "mycoscape:ore_iron_upper_bonus",
+    "mycoscape:ore_iron_small_bonus",
+    "mycoscape:ore_copper_large_bonus",
+    "mycoscape:ore_gold_bonus",
+    "mycoscape:ore_redstone_lower_bonus",
+    "mycoscape:ore_diamond_bonus",
+    "mycoscape:ore_lapis_buried_bonus"
+  ],
+  "step": "underground_ores"
+}

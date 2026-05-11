@@ -1,4 +1,4 @@
-// 1.21.11	2026-05-10T17:36:16.044655	Tags for minecraft:item mod id mycoscape
+// 1.21.11	2026-05-11T12:57:06.34231	Tags for minecraft:item mod id mycoscape
 ee895e04815c320f3760ecf67628a8bd746f3b14 data/minecraft/tags/item/fence_gates.json
 72270c7954d8e812f26caadb825c290bb2b950f7 data/minecraft/tags/item/logs_that_burn.json
 30aea22538edfafc726464701e1bb23ff6223ee9 data/minecraft/tags/item/planks.json
@@ -9,3 +9,4 @@ bc92a6820f0c6d7b958c48a90b65631fecdceb1a data/minecraft/tags/item/wooden_doors.j
 008b258e7665ed85f2c7ee2decec945b06432553 data/minecraft/tags/item/wooden_slabs.json
 471ab7215bbf18c7299b835b6ba01d9c57ce28a7 data/minecraft/tags/item/wooden_stairs.json
 947f0bc5cdbe6f2db9073c28eed6d7a2f2f81329 data/minecraft/tags/item/wooden_trapdoors.json
+ef28cb050efa712946b8c2baa26110b28faa58c6 data/mycoscape/tags/item/custom_mushrooms.json

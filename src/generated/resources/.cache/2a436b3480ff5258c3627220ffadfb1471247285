@@ -1,4 +1,4 @@
-// 1.21.11	2026-05-11T11:59:55.842785	Mycoscape Model Definitions
+// 1.21.11	2026-05-11T12:57:06.343402	Mycoscape Model Definitions
 896ed3ca68b0127bbb0a99696427bccaca7f08ac assets/mycoscape/blockstates/blewit_fungus.json
 4c57dbf6eb7ea24c045f9a6b015e315fc754bbc5 assets/mycoscape/blockstates/blewit_mushroom_cap.json
 227a6c9635e22edb7989e603c8c013e62b7d97df assets/mycoscape/blockstates/fungal_conduit.json
@@ -37,6 +37,7 @@ e351b42b191c3e41c48c60ff22b99963b620df86 assets/mycoscape/items/jack_o_lantern_v
 59070c2b36b42aba0d1a6e225d644da0bf8e4c1a assets/mycoscape/items/morel.json
 b37225ffc089e1bbe4932c51fab63442dbcb9266 assets/mycoscape/items/morel_mushroom_cap.json
 20f2b451dce051af33876e37c190d3b1c7576fd2 assets/mycoscape/items/mushroom_stem.json
+8f26a81eef02329c9e35f44948d0a0a4c218467c assets/mycoscape/items/mycelium_fabric.json
 1585e3c470965a4e17c9a8de0b939d558ef4a86f assets/mycoscape/items/mycoslate.json
 06a2ea3286b5fec2022ac9c1e25400705c087b1a assets/mycoscape/items/necroshroom.json
 73171f93239478d0c6f826cd6596fd458c33e171 assets/mycoscape/items/necroshroom_cap.json
@@ -109,5 +110,6 @@ c06281ecb0fe1072665b7c613715f3b6a2eca6d5 assets/mycoscape/models/block/stripped_
 b2199cb745dc94266e160decbd7c753b6a0af49e assets/mycoscape/models/item/blewit.json
 2362b2356e2053bcc86e5aa8b15b74b0cb360464 assets/mycoscape/models/item/jack_o_lantern_mushroom.json
 fdb44ab14925bdc1c5f70b305e6105a239beda13 assets/mycoscape/models/item/morel.json
+221ffe0175df2617f558438cec563c52fbd99199 assets/mycoscape/models/item/mycelium_fabric.json
 d867a8ec9ab6269541ccc63fbc24b4688a333b83 assets/mycoscape/models/item/necroshroom.json
 fa23e21c418c47df7584a7bf654780173702bda8 assets/mycoscape/models/item/rotwood_door.json

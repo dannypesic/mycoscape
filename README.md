@@ -25,7 +25,7 @@ A NeoForge 1.21.11 Minecraft mod, forked from the legacy Mycoscape tech project,
 
 ### New blocks & items
 - [ ] **Food items**: recipes, food values, and possibly custom effects
-- [ ] **Mycelium Fabric**: craftable from mushrooms, used as a wool substitute for easy wool collection 
+- [x] **Mycelium Fabric**: craftable from mushrooms, used as a wool substitute for easy wool collection 
 - [ ] **Death Vine**: crafted from Necroshroom + Necroshroom Hyphae; behaves like a cobweb but deals damage over time to anything caught in it
 
 ### Features & worldgen
@@ -34,7 +34,7 @@ A NeoForge 1.21.11 Minecraft mod, forked from the legacy Mycoscape tech project,
 - [x] Surface biome containing primarily blewit trees with occasional morel trees
 - [x] Jack o'Lantern mushrooms in the caves
 - [x] Ground is fungal substrate
-- [ ] Ores in cave
+- [x] Ores in cave
 
 ### Release prep
 - [ ] `LICENSE`

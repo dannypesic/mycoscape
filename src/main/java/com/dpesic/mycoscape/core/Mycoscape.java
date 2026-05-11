@@ -37,6 +37,10 @@ public class Mycoscape {
             event.accept(new ItemStack(ModItems.JACK_O_LANTERN_VEIN_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
 
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(new ItemStack(ModItems.MYCELIUM_FABRIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             // Rotwood wood set
             event.accept(new ItemStack(ModItems.ROTWOOD_LEAVES_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);

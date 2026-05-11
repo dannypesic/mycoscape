@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#mycoscape:custom_mushrooms",
+    "#mycoscape:custom_mushrooms"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mycoscape:mycelium_fabric"
+  }
+}

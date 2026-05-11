@@ -487,6 +487,9 @@ public class ModModelProvider implements DataProvider {
         blockItem(ModItems.JACK_O_LANTERN_VEIN_ITEM.get(), ModBlocks.JACK_O_LANTERN_VEIN.get(), itemOutput);
         blockItem(ModItems.FUNGAL_CONDUIT_ITEM.get(), ModBlocks.FUNGAL_CONDUIT.get(), itemOutput);
 
+        // Crafting materials
+        flatItem(ModItems.MYCELIUM_FABRIC.get(), itemOutput, modelOutput);
+
         // Door item uses flat sprite (item/rotwood_door.png)
         flatItem(ModItems.ROTWOOD_DOOR_ITEM.get(), itemOutput, modelOutput);
     }

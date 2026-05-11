@@ -57,6 +57,15 @@ public class ModItems {
             )
     );
 
+    // ---- Crafting materials --------------------------------------------------
+
+    public static final DeferredHolder<Item, Item> MYCELIUM_FABRIC = ITEMS.register(
+            "mycelium_fabric",
+            rn -> new Item(new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, rn))
+            )
+    );
+
     // ---- Block Items: Fungus plants ------------------------------------------
 
     // No block items for the small fungus plants (they're not placeable as items)

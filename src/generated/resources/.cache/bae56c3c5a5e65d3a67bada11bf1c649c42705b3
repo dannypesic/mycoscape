@@ -1,4 +1,5 @@
-// 1.21.11	2026-05-11T12:10:09.819528	Tags for minecraft:block mod id mycoscape
+// 1.21.11	2026-05-11T12:44:20.474	Tags for minecraft:block mod id mycoscape
+b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/deepslate_ore_replaceables.json
 ee895e04815c320f3760ecf67628a8bd746f3b14 data/minecraft/tags/block/fence_gates.json
 9b94d899542ee081dff78b1d5cf3171a783ba8df data/minecraft/tags/block/leaves.json
 72270c7954d8e812f26caadb825c290bb2b950f7 data/minecraft/tags/block/logs_that_burn.json
@@ -9,6 +10,7 @@ fa899419a82395cd4da6bc8a8f7e540c7c3e86af data/minecraft/tags/block/mineable/shov
 720ba45b38866cb8c98468be66f4eafaa301c7c5 data/minecraft/tags/block/mushroom_grow_block.json
 b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/needs_stone_tool.json
 30aea22538edfafc726464701e1bb23ff6223ee9 data/minecraft/tags/block/planks.json
+b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/stone_ore_replaceables.json
 e893d54b78fb599acdc21c8b7837f3827bc42f51 data/minecraft/tags/block/wooden_buttons.json
 bc92a6820f0c6d7b958c48a90b65631fecdceb1a data/minecraft/tags/block/wooden_doors.json
 2fc375b0a9e1736333faf3559efe4748c41e96e4 data/minecraft/tags/block/wooden_fences.json

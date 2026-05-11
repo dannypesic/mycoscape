@@ -2,6 +2,7 @@ package com.dpesic.mycoscape.datagen;
 
 import com.dpesic.mycoscape.core.ModBlocks;
 import com.dpesic.mycoscape.core.ModItems;
+import com.dpesic.mycoscape.tags.MycoscapeItemTags;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -118,6 +119,21 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("PP")
                 .unlockedBy("has_rotwood_planks", has(ModBlocks.ROTWOOD_PLANKS.get()))
                 .save(output);
+
+        // ---- Mycelium Fabric ------------------------------------------------
+        // Any 2 custom mushrooms → 1 mycelium_fabric
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.MYCELIUM_FABRIC.get())
+                .requires(MycoscapeItemTags.CUSTOM_MUSHROOMS)
+                .requires(MycoscapeItemTags.CUSTOM_MUSHROOMS)
+                .unlockedBy("has_custom_mushroom", has(MycoscapeItemTags.CUSTOM_MUSHROOMS))
+                .save(output, "mycelium_fabric_from_mushrooms");
+
+        // 2 mycelium_fabric → 1 white wool
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, Items.WHITE_WOOL)
+                .requires(ModItems.MYCELIUM_FABRIC.get())
+                .requires(ModItems.MYCELIUM_FABRIC.get())
+                .unlockedBy("has_mycelium_fabric", has(ModItems.MYCELIUM_FABRIC.get()))
+                .save(output, "white_wool_from_mycelium_fabric");
 
         // ---- Fungal substrate -----------------------------------------------
         ShapedRecipeBuilder.shaped(items, RecipeCategory.MISC, ModItems.FUNGAL_SUBSTRATE_ITEM.get())

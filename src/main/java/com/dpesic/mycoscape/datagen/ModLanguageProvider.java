@@ -19,6 +19,9 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.JACK_O_LANTERN_MUSHROOM,   "Jack o'Lantern Mushroom");
         addItem(ModItems.NECROSHROOM,               "Necroshroom");
 
+        // ---- Crafting materials ---------------------------------------------
+        addItem(ModItems.MYCELIUM_FABRIC,           "Mycelium Fabric");
+
         // ---- Big mushroom caps -----------------------------------------------
         addBlock(ModBlocks.BLEWIT_MUSHROOM_CAP,            "Blewit Mushroom Cap");
         addBlock(ModBlocks.MOREL_MUSHROOM_CAP,             "Morel Mushroom Cap");

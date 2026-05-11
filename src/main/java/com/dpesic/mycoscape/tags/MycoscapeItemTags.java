@@ -16,4 +16,6 @@ public class MycoscapeItemTags {
     public static TagKey<Item> mycoscapeTag(String path) {
         return TagKey.create(Registries.ITEM, id(path));
     }
+
+    public static final TagKey<Item> CUSTOM_MUSHROOMS = mycoscapeTag("custom_mushrooms");
 }
