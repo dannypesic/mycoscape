@@ -464,6 +464,10 @@ public class ModModelProvider implements DataProvider {
         flatItem(ModItems.MOREL.get(), itemOutput, modelOutput);
         flatItem(ModItems.JACK_O_LANTERN_MUSHROOM.get(), itemOutput, modelOutput);
         flatItem(ModItems.NECROSHROOM.get(), itemOutput, modelOutput);
+        flatItem(ModItems.ROASTED_BLEWIT.get(), itemOutput, modelOutput);
+        flatItem(ModItems.ROASTED_MOREL.get(), itemOutput, modelOutput);
+        flatItem(ModItems.ROASTED_JACK_O_LANTERN_MUSHROOM.get(), itemOutput, modelOutput);
+        flatItem(ModItems.ROASTED_NECROSHROOM.get(), itemOutput, modelOutput);
 
         // Block items using block model
         blockItem(ModItems.ROTWOOD_ITEM.get(), ModBlocks.ROTWOOD.get(), itemOutput);

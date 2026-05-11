@@ -1,4 +1,4 @@
-// 1.21.11	2026-05-11T13:33:04.284116	Mycoscape Model Definitions
+// 1.21.11	2026-05-11T13:44:05.655507	Mycoscape Model Definitions
 896ed3ca68b0127bbb0a99696427bccaca7f08ac assets/mycoscape/blockstates/blewit_fungus.json
 4c57dbf6eb7ea24c045f9a6b015e315fc754bbc5 assets/mycoscape/blockstates/blewit_mushroom_cap.json
 632087d67374e1aed7f03f0a110efea0e4d9b7fe assets/mycoscape/blockstates/death_vine.json
@@ -44,6 +44,10 @@ b37225ffc089e1bbe4932c51fab63442dbcb9266 assets/mycoscape/items/morel_mushroom_c
 06a2ea3286b5fec2022ac9c1e25400705c087b1a assets/mycoscape/items/necroshroom.json
 73171f93239478d0c6f826cd6596fd458c33e171 assets/mycoscape/items/necroshroom_cap.json
 444ff7c6af7036f46c6ceb2c358d9a842d47820c assets/mycoscape/items/necroshroom_hyphae.json
+994e7881b845ec4191e443999df91680f6357e3b assets/mycoscape/items/roasted_blewit.json
+789d30d1d4bfaa4ed4bda41e5acacb7bac646257 assets/mycoscape/items/roasted_jack_o_lantern_mushroom.json
+f5b4ec997a1654b50a762ce17d61fbb2fd459cdb assets/mycoscape/items/roasted_morel.json
+dcbcd137f89a62abdc246be05d7f411383c02b68 assets/mycoscape/items/roasted_necroshroom.json
 ce08c5b20fad82a407d2a5b561a589e655e9021d assets/mycoscape/items/rotwood.json
 e81f0e0f09f5feea361f939941edd3d0c922fe94 assets/mycoscape/items/rotwood_button.json
 c16ca459bcfd33b5a5c5a677d1747b0e8a1838dd assets/mycoscape/items/rotwood_door.json
@@ -115,4 +119,8 @@ b2199cb745dc94266e160decbd7c753b6a0af49e assets/mycoscape/models/item/blewit.jso
 fdb44ab14925bdc1c5f70b305e6105a239beda13 assets/mycoscape/models/item/morel.json
 221ffe0175df2617f558438cec563c52fbd99199 assets/mycoscape/models/item/mycelium_fabric.json
 d867a8ec9ab6269541ccc63fbc24b4688a333b83 assets/mycoscape/models/item/necroshroom.json
+a96c67c7d1c3caaea67cea58ebf20b4b172af593 assets/mycoscape/models/item/roasted_blewit.json
+cbfaeeabcb46610807adc67841a20b6db86a203c assets/mycoscape/models/item/roasted_jack_o_lantern_mushroom.json
+d3d2133447d10d97e8fb09e5df339884318de191 assets/mycoscape/models/item/roasted_morel.json
+31831822367e7ca5e62557fb80e351b2e3c10f4f assets/mycoscape/models/item/roasted_necroshroom.json
 fa23e21c418c47df7584a7bf654780173702bda8 assets/mycoscape/models/item/rotwood_door.json

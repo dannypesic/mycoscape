@@ -14,10 +14,14 @@ public class ModLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         // ---- Mushroom food items ---------------------------------------------
-        addItem(ModItems.BLEWIT,                    "Blewit");
-        addItem(ModItems.MOREL,                     "Morel");
-        addItem(ModItems.JACK_O_LANTERN_MUSHROOM,   "Jack o'Lantern Mushroom");
-        addItem(ModItems.NECROSHROOM,               "Necroshroom");
+        addItem(ModItems.BLEWIT,                            "Blewit");
+        addItem(ModItems.MOREL,                             "Morel");
+        addItem(ModItems.JACK_O_LANTERN_MUSHROOM,           "Jack o'Lantern Mushroom");
+        addItem(ModItems.NECROSHROOM,                       "Necroshroom");
+        addItem(ModItems.ROASTED_BLEWIT,                    "Roasted Blewit");
+        addItem(ModItems.ROASTED_MOREL,                     "Roasted Morel");
+        addItem(ModItems.ROASTED_JACK_O_LANTERN_MUSHROOM,   "Roasted Jack o'Lantern Mushroom");
+        addItem(ModItems.ROASTED_NECROSHROOM,               "Roasted Necroshroom");
 
         // ---- Crafting materials ---------------------------------------------
         addItem(ModItems.MYCELIUM_FABRIC,           "Mycelium Fabric");

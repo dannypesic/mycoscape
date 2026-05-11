@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": "mycoscape:blewit",
+  "result": {
+    "count": 1,
+    "id": "mycoscape:roasted_blewit"
+  }
+}

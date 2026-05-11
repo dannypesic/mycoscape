@@ -24,9 +24,9 @@ A NeoForge 1.21.11 Minecraft mod, forked from the legacy Mycoscape tech project,
 - [ ] Rotwood door and trapdoor texture polish
 
 ### New blocks & items
-- [ ] **Food items**: recipes, food values, and possibly custom effects
+- [x] **Food items**: recipes, food values, and possibly custom effects
 - [x] **Mycelium Fabric**: craftable from mushrooms, used as a wool substitute for easy wool collection 
-- [ ] **Death Vine**: crafted from Necroshroom + Necroshroom Hyphae; behaves like a cobweb but deals damage over time to anything caught in it
+- [x] **Death Vine**: crafted from Necroshroom + Necroshroom Hyphae; behaves like a cobweb but deals damage over time to anything caught in it
 
 ### Features & worldgen
 - [x] Fungal Forest placed features wired into the biome generation settings (mushroom clusters, rotwood trees)

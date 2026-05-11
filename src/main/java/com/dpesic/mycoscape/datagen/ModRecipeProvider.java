@@ -12,8 +12,10 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -141,6 +143,35 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModItems.MYCELIUM_FABRIC.get())
                 .unlockedBy("has_necroshroom", has(ModItems.NECROSHROOM.get()))
                 .save(output, "death_vine");
+
+        // ---- Roasted mushrooms (smelting + smoking) -------------------------
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.BLEWIT.get()), RecipeCategory.FOOD, ModItems.ROASTED_BLEWIT.get(), 0.35f, 200)
+                .unlockedBy("has_blewit", has(ModItems.BLEWIT.get()))
+                .save(output, "roasted_blewit_from_smelting");
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.BLEWIT.get()), RecipeCategory.FOOD, ModItems.ROASTED_BLEWIT.get(), 0.35f, 100)
+                .unlockedBy("has_blewit", has(ModItems.BLEWIT.get()))
+                .save(output, "roasted_blewit_from_smoking");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.MOREL.get()), RecipeCategory.FOOD, ModItems.ROASTED_MOREL.get(), 0.35f, 200)
+                .unlockedBy("has_morel", has(ModItems.MOREL.get()))
+                .save(output, "roasted_morel_from_smelting");
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.MOREL.get()), RecipeCategory.FOOD, ModItems.ROASTED_MOREL.get(), 0.35f, 100)
+                .unlockedBy("has_morel", has(ModItems.MOREL.get()))
+                .save(output, "roasted_morel_from_smoking");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.JACK_O_LANTERN_MUSHROOM.get()), RecipeCategory.FOOD, ModItems.ROASTED_JACK_O_LANTERN_MUSHROOM.get(), 0.35f, 200)
+                .unlockedBy("has_jack_o_lantern_mushroom", has(ModItems.JACK_O_LANTERN_MUSHROOM.get()))
+                .save(output, "roasted_jack_o_lantern_mushroom_from_smelting");
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.JACK_O_LANTERN_MUSHROOM.get()), RecipeCategory.FOOD, ModItems.ROASTED_JACK_O_LANTERN_MUSHROOM.get(), 0.35f, 100)
+                .unlockedBy("has_jack_o_lantern_mushroom", has(ModItems.JACK_O_LANTERN_MUSHROOM.get()))
+                .save(output, "roasted_jack_o_lantern_mushroom_from_smoking");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.NECROSHROOM.get()), RecipeCategory.FOOD, ModItems.ROASTED_NECROSHROOM.get(), 0.35f, 200)
+                .unlockedBy("has_necroshroom", has(ModItems.NECROSHROOM.get()))
+                .save(output, "roasted_necroshroom_from_smelting");
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.NECROSHROOM.get()), RecipeCategory.FOOD, ModItems.ROASTED_NECROSHROOM.get(), 0.35f, 100)
+                .unlockedBy("has_necroshroom", has(ModItems.NECROSHROOM.get()))
+                .save(output, "roasted_necroshroom_from_smoking");
 
         // ---- Fungal substrate -----------------------------------------------
         ShapedRecipeBuilder.shaped(items, RecipeCategory.MISC, ModItems.FUNGAL_SUBSTRATE_ITEM.get())

@@ -38,6 +38,13 @@ public class Mycoscape {
             event.accept(new ItemStack(ModItems.DEATH_VINE_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
 
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(new ItemStack(ModItems.ROASTED_BLEWIT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(new ItemStack(ModItems.ROASTED_MOREL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(new ItemStack(ModItems.ROASTED_JACK_O_LANTERN_MUSHROOM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(new ItemStack(ModItems.ROASTED_NECROSHROOM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(new ItemStack(ModItems.MYCELIUM_FABRIC.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
