@@ -38,14 +38,8 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
         return !placed.isEmpty();
     }
 
-    /**
-     * Momentum-based walk that produces natural snaking veins.
-     *
-     * Most steps go straight along the primary direction (blocks in a row).
-     * On a curve roll, the step drifts 1 block perpendicular instead of forward,
-     * creating a smooth bend. This means the vein is always 1 block wide —
-     * no clumping — but blocks can be in a straight line.
-     */
+    
+
     private void walk(WorldGenLevel level, RandomSource random, BlockPos start,
                       Direction primary, Direction[] driftAxes, int maxSteps,
                       WallVeinFeatureConfiguration config, int depth, Set<BlockPos> placed) {
@@ -56,12 +50,12 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
             BlockPos next;
 
             if (random.nextFloat() < config.curveChance()) {
-                // Curve: step perpendicular only (no forward movement this tick).
-                // This creates a smooth lateral shift rather than a zigzag.
+                
+                
                 Direction drift = driftAxes[random.nextInt(driftAxes.length)];
                 next = pos.relative(drift);
             } else {
-                // Straight: step forward along primary direction
+                
                 next = pos.relative(primary);
             }
 
@@ -69,7 +63,7 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
                 pos = next;
                 failStreak = 0;
 
-                // Branch: fork at a shallow angle (same primary, offset start, shorter)
+                
                 if (depth < 1 && random.nextFloat() < config.branchChance()) {
                     Direction branchDrift = driftAxes[random.nextInt(driftAxes.length)];
                     BlockPos branchStart = pos.relative(branchDrift);
@@ -79,7 +73,7 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
                 continue;
             }
 
-            // Fallback: try all perpendicular directions, then forward
+            
             boolean recovered = false;
             for (Direction altDrift : driftAxes) {
                 BlockPos alt = pos.relative(altDrift);
@@ -91,17 +85,15 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
                 }
             }
             if (!recovered) {
-                // Skip forward without placing to get past obstacles
+                
                 pos = pos.relative(primary);
                 failStreak++;
             }
         }
     }
 
-    /**
-     * Place a block if the position is valid: replaceable, borders air,
-     * and won't create a 2-wide clump (no more than 1 already-placed neighbor).
-     */
+    
+
     private boolean tryPlace(WorldGenLevel level, RandomSource random, BlockPos pos,
                              WallVeinFeatureConfiguration config, Set<BlockPos> placed) {
         if (!isReplaceable(level, pos, config)) return false;
@@ -118,10 +110,8 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
         return true;
     }
 
-    /**
-     * Count how many cardinally adjacent positions already have a placed vein block.
-     * Allowing 1 neighbor means straight runs are fine; blocking >1 prevents clumps.
-     */
+    
+
     private int countAdjacentVein(BlockPos pos, Set<BlockPos> placed) {
         int count = 0;
         for (Direction dir : Direction.values()) {

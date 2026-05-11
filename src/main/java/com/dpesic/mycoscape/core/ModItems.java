@@ -35,7 +35,7 @@ public class ModItems {
         );
     }
 
-    // ---- Mushroom food items -------------------------------------------------
+    
 
     public static final DeferredHolder<Item, BlewitItem> BLEWIT = ITEMS.register(
             "blewit",
@@ -65,7 +65,7 @@ public class ModItems {
             )
     );
 
-    // ---- Roasted mushroom food items -----------------------------------------
+    
 
     private static final FoodProperties ROASTED_MUSHROOM_FOOD = new FoodProperties.Builder()
             .nutrition(5)
@@ -132,7 +132,7 @@ public class ModItems {
             )
     );
 
-    // ---- Crafting materials --------------------------------------------------
+    
 
     public static final DeferredHolder<Item, Item> MYCELIUM_FABRIC = ITEMS.register(
             "mycelium_fabric",
@@ -141,11 +141,11 @@ public class ModItems {
             )
     );
 
-    // ---- Block Items: Fungus plants ------------------------------------------
+    
 
-    // No block items for the small fungus plants (they're not placeable as items)
+    
 
-    // ---- Block Items: Big mushroom caps --------------------------------------
+    
 
     public static final DeferredHolder<Item, BlockItem> BLEWIT_MUSHROOM_CAP_ITEM =
             registerBlockItem("blewit_mushroom_cap", ModBlocks.BLEWIT_MUSHROOM_CAP);
@@ -163,7 +163,7 @@ public class ModItems {
             registerBlockItem("mushroom_stem", ModBlocks.MUSHROOM_STEM);
 
 
-    // ---- Block Items: Rotwood wood set ----------------------------------------
+    
 
     public static final DeferredHolder<Item, BlockItem> ROTWOOD_LEAVES_ITEM =
             registerBlockItem("rotwood_leaves", ModBlocks.ROTWOOD_LEAVES);
@@ -207,7 +207,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> ROTWOOD_PRESSURE_PLATE_ITEM =
             registerBlockItem("rotwood_pressure_plate", ModBlocks.ROTWOOD_PRESSURE_PLATE);
 
-    // ---- Block Items: Terrain & decoration -----------------------------------
+    
 
     public static final DeferredHolder<Item, BlockItem> FUNGAL_SUBSTRATE_ITEM =
             registerBlockItem("fungal_substrate", ModBlocks.FUNGAL_SUBSTRATE);

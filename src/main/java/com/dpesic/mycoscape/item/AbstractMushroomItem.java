@@ -20,7 +20,7 @@ public abstract class AbstractMushroomItem extends Item {
         super(props);
     }
 
-    protected abstract BlockState placeBlockstate(); // return ModBlocks.MY_ITEM.get().defaultBlockState();
+    protected abstract BlockState placeBlockstate(); 
 
     protected abstract TagKey<Block> groundStateTag();
 
@@ -29,7 +29,7 @@ public abstract class AbstractMushroomItem extends Item {
         Level level = ctx.getLevel();
         BlockPos groundPos = ctx.getClickedPos();
 
-        // On mycoscape:#fungi_ground
+        
         BlockState groundState = level.getBlockState(groundPos);
         if (!groundState.is(groundStateTag())) {
             return InteractionResult.PASS;

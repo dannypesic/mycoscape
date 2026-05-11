@@ -18,7 +18,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        // ---- Axe-mineable ---------------------------------------------------
+        
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.ROTWOOD.get())
                 .add(ModBlocks.STRIPPED_ROTWOOD_LOG.get())
@@ -39,28 +39,28 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NECROSHROOM_CAP.get())
                 .add(ModBlocks.MUSHROOM_STEM.get());
 
-        // ---- Pickaxe-mineable -----------------------------------------------
+        
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.MYCOSLATE.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MYCOSLATE.get());
 
-        // ---- Shovel-mineable ------------------------------------------------
+        
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.FUNGAL_SUBSTRATE.get());
 
-        // ---- Hoe-mineable ---------------------------------------------------
+        
         tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.NECROSHROOM_HYPHAE.get())
                 .add(ModBlocks.ROTWOOD_LEAVES.get())
                 .add(ModBlocks.DEATH_VINE.get());
 
-        // ---- Leaves ---------------------------------------------------------
+        
         tag(BlockTags.LEAVES)
                 .add(ModBlocks.ROTWOOD_LEAVES.get());
 
-        // ---- Vanilla wood tags (for fire spread, crafting recipes, etc.) -----
+        
         tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.ROTWOOD.get())
                 .add(ModBlocks.STRIPPED_ROTWOOD_LOG.get())
@@ -94,7 +94,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.ROTWOOD_PRESSURE_PLATE.get());
 
-        // ---- Custom Mycoscape block tags -------------------------------------
+        
         tag(MycoscapeBlockTags.FUNGI_GROUND)
                 .addTag(BlockTags.DIRT)
                 .add(ModBlocks.FUNGAL_SUBSTRATE.get())
@@ -104,7 +104,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(MycoscapeBlockTags.MYCOSLATE)
                 .add(ModBlocks.MYCOSLATE.get());
 
-        // Allow vanilla and modded ores to replace mycoslate in mycoscape_caves
+        
         tag(BlockTags.STONE_ORE_REPLACEABLES)
                 .add(ModBlocks.MYCOSLATE.get());
         tag(BlockTags.DEEPSLATE_ORE_REPLACEABLES)

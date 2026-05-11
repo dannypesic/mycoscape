@@ -74,7 +74,7 @@ public class FungalConduitBlock extends Block{
                     if (state.is(blockTag)) {
                         found++;
 
-                        // 1 / found chance to replace
+                        
                         if (random.nextInt(found) == 0) {
                             chosen = checkPos;
                         }
@@ -83,7 +83,7 @@ public class FungalConduitBlock extends Block{
             }
         }
 
-        return chosen; // null if no blocks found
+        return chosen; 
     }
 
     @Override
@@ -97,7 +97,7 @@ public class FungalConduitBlock extends Block{
 
         if (rand.nextInt(5) == 0) {
 
-            // custom signal behavior             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
+            
             if (signal == 15) {
                 if (!level.isClientSide()) {
                     BlockPos woodPos = findRandomBlock(pos, level, BlockTags.LOGS, 5, 5, 5);
@@ -108,7 +108,7 @@ public class FungalConduitBlock extends Block{
                 }
 
             }
-            // cluster drain logic removed (imbued cluster removed from mod)
+            
         }
 
     }

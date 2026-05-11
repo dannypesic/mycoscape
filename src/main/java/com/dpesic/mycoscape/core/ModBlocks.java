@@ -18,7 +18,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(Registries.BLOCK, Mycoscape.MODID);
 
-    // ---- Fungus plants (small, floor-level) ----------------------------------
+    
 
     public static final DeferredHolder<Block, BlewitFungusBlock> BLEWIT_FUNGUS = BLOCKS.register(
             "blewit_fungus",
@@ -68,7 +68,7 @@ public class ModBlocks {
             )
     );
 
-    // ---- Big mushroom caps (HugeMushroomBlock) --------------------------------
+    
 
     public static final DeferredHolder<Block, HugeMushroomBlock> BLEWIT_MUSHROOM_CAP = BLOCKS.register(
             "blewit_mushroom_cap",
@@ -121,7 +121,7 @@ public class ModBlocks {
             )
     );
 
-    // ---- Rotwood log (existing) & full wood set (new) ------------------------
+    
 
     public static final DeferredHolder<Block, RotatedPillarBlock> ROTWOOD = BLOCKS.register(
             "rotwood",
@@ -291,7 +291,7 @@ public class ModBlocks {
             )
     );
 
-    // ---- Terrain & decoration -----------------------------------------------
+    
 
     public static final DeferredHolder<Block, Block> FUNGAL_SUBSTRATE = BLOCKS.register(
             "fungal_substrate",
@@ -337,7 +337,7 @@ public class ModBlocks {
             )
     );
 
-    // ---- Death Vine ---------------------------------------------------------
+    
 
     public static final DeferredHolder<Block, DeathVineBlock> DEATH_VINE = BLOCKS.register(
             "death_vine",
@@ -350,7 +350,7 @@ public class ModBlocks {
             )
     );
 
-    // ---- Fungal Conduit (kept registered but unused in world) ----------------
+    
 
     public static final DeferredHolder<Block, FungalConduitBlock> FUNGAL_CONDUIT = BLOCKS.register(
             "fungal_conduit",

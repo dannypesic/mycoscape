@@ -13,7 +13,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        // ---- Mushroom food items ---------------------------------------------
+        
         addItem(ModItems.BLEWIT,                            "Blewit");
         addItem(ModItems.MOREL,                             "Morel");
         addItem(ModItems.JACK_O_LANTERN_MUSHROOM,           "Jack o'Lantern Mushroom");
@@ -23,17 +23,17 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.ROASTED_JACK_O_LANTERN_MUSHROOM,   "Roasted Jack o'Lantern Mushroom");
         addItem(ModItems.ROASTED_NECROSHROOM,               "Roasted Necroshroom");
 
-        // ---- Crafting materials ---------------------------------------------
+        
         addItem(ModItems.MYCELIUM_FABRIC,           "Mycelium Fabric");
 
-        // ---- Big mushroom caps -----------------------------------------------
+        
         addBlock(ModBlocks.BLEWIT_MUSHROOM_CAP,            "Blewit Mushroom Cap");
         addBlock(ModBlocks.MOREL_MUSHROOM_CAP,             "Morel Mushroom Cap");
         addBlock(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP,    "Jack o'Lantern Mushroom Cap");
         addBlock(ModBlocks.NECROSHROOM_CAP,                "Necroshroom Cap");
         addBlock(ModBlocks.MUSHROOM_STEM,                  "Mushroom Stem");
 
-        // ---- Rotwood wood set -----------------------------------------------
+        
         addBlock(ModBlocks.ROTWOOD_LEAVES,          "Rotwood Leaves");
         addBlock(ModBlocks.ROTWOOD,                 "Rotwood Log");
         addBlock(ModBlocks.STRIPPED_ROTWOOD_LOG,    "Stripped Rotwood Log");
@@ -49,7 +49,7 @@ public class ModLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.ROTWOOD_BUTTON,          "Rotwood Button");
         addBlock(ModBlocks.ROTWOOD_PRESSURE_PLATE,  "Rotwood Pressure Plate");
 
-        // ---- Terrain & decoration -------------------------------------------
+        
         addBlock(ModBlocks.FUNGAL_SUBSTRATE,        "Fungal Substrate");
         addBlock(ModBlocks.MYCOSLATE,               "Mycoslate");
         addBlock(ModBlocks.NECROSHROOM_HYPHAE,      "Necroshroom Hyphae");
@@ -57,7 +57,7 @@ public class ModLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.FUNGAL_CONDUIT,          "Fungal Conduit");
         addBlock(ModBlocks.DEATH_VINE,              "Death Vine");
 
-        // ---- Biomes ---------------------------------------------------------
+        
         add("biome.mycoscape.mycoscape_surface", "Mycoscape");
         add("biome.mycoscape.mycoscape_caves",   "Mycoscape Caves");
     }

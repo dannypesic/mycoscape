@@ -25,12 +25,12 @@ public class Mycoscape {
 
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-            // Mushroom food
+            
             event.accept(new ItemStack(ModItems.BLEWIT.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.MOREL.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.JACK_O_LANTERN_MUSHROOM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.NECROSHROOM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            // Terrain
+            
             event.accept(new ItemStack(ModItems.FUNGAL_SUBSTRATE_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.MYCOSLATE_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.NECROSHROOM_HYPHAE_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -50,7 +50,7 @@ public class Mycoscape {
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            // Rotwood wood set
+            
             event.accept(new ItemStack(ModItems.ROTWOOD_LEAVES_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.ROTWOOD_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.STRIPPED_ROTWOOD_LOG_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -65,7 +65,7 @@ public class Mycoscape {
             event.accept(new ItemStack(ModItems.ROTWOOD_TRAPDOOR_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.ROTWOOD_BUTTON_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.ROTWOOD_PRESSURE_PLATE_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            // Big mushroom blocks
+            
             event.accept(new ItemStack(ModItems.BLEWIT_MUSHROOM_CAP_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.MOREL_MUSHROOM_CAP_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.JACK_O_LANTERN_MUSHROOM_CAP_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);

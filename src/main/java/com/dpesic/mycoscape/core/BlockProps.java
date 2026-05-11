@@ -9,7 +9,8 @@ public final class BlockProps {
         ToolTier(float speed) { this.speed = speed; }
     }
 
-    /** destroyTime value that results in ~ticks break time with the given tool tier */
+    
+
     public static float ticks(int ticks, ToolTier tier) {
         return ticks * tier.speed / 30f;
     }
