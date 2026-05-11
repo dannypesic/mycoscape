@@ -109,6 +109,12 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
         if (countAdjacentVein(pos, placed) > 1) return false;
         level.setBlock(pos, config.state().getState(random, pos), 2);
         placed.add(pos.immutable());
+        config.vegetation().ifPresent(veg -> {
+            BlockPos above = pos.above();
+            if (level.getBlockState(above).isAir()) {
+                level.setBlock(above, veg.getState(random, above), 2);
+            }
+        });
         return true;
     }
 

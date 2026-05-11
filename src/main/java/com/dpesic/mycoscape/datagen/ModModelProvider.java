@@ -122,6 +122,9 @@ public class ModModelProvider implements DataProvider {
         bmg.createTrivialCube(ModBlocks.MYCOSLATE.get());
         bmg.createTrivialCube(ModBlocks.ROTWOOD_PLANKS.get());
 
+        // Rotwood leaves
+        leavesBlock(ModBlocks.ROTWOOD_LEAVES.get(), bsOutput, modelOutput, itemOutput);
+
         // Rotwood log family (axis-aligned pillars)
         bmg.createAxisAlignedPillarBlock(ModBlocks.ROTWOOD.get(), TexturedModel.COLUMN);
         bmg.createAxisAlignedPillarBlock(ModBlocks.STRIPPED_ROTWOOD_LOG.get(), TexturedModel.COLUMN);
@@ -382,6 +385,23 @@ public class ModModelProvider implements DataProvider {
     }
 
     // ---- Other block helpers -----------------------------------------------
+
+    private void leavesBlock(Block block,
+                              Consumer<BlockModelDefinitionGenerator> bsOutput,
+                              BiConsumer<Identifier, ModelInstance> modelOutput,
+                              ItemModelOutput itemOutput) {
+        Identifier modelId = ModelLocationUtils.getModelLocation(block);
+        modelOutput.accept(modelId, () -> {
+            JsonObject json = new JsonObject();
+            json.addProperty("parent", "minecraft:block/leaves");
+            JsonObject textures = new JsonObject();
+            textures.addProperty("all", TextureMapping.getBlockTexture(block).toString());
+            json.add("textures", textures);
+            return json;
+        });
+        bsOutput.accept(MultiVariantGenerator.dispatch(block, mv(modelId)));
+        blockItem(ModItems.ROTWOOD_LEAVES_ITEM.get(), block, itemOutput);
+    }
 
     private void conduitBlock(Block block, Consumer<BlockModelDefinitionGenerator> bsOutput) {
         Identifier modelId = Identifier.fromNamespaceAndPath(Mycoscape.MODID, "block/fungal_conduit");

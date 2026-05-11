@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "mycoscape:block/rotwood_leaves"
+  }
+}

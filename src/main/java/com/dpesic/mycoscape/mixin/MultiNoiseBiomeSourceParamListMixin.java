@@ -59,7 +59,7 @@ public class MultiNoiseBiomeSourceParamListMixin {
                 Climate.Parameter.span(0.03f, 0.3f),    // continentalness: mid inland
                 Climate.Parameter.span(-0.375f, 0.05f), // erosion: low-moderate
                 Climate.Parameter.point(0.0f),           // depth: surface
-                Climate.Parameter.span(0.55f, 0.9f),    // weirdness: high (rare)
+                Climate.Parameter.span(0.2f, 0.9f),     // weirdness: expanded for ~2x more common
                 0L
             ),
             surface.get()
@@ -71,8 +71,8 @@ public class MultiNoiseBiomeSourceParamListMixin {
                 Climate.Parameter.span(0.1f, 0.3f),     // humidity: moderately wet
                 Climate.Parameter.span(-0.11f, 0.55f),  // continentalness: inland range
                 Climate.Parameter.span(-0.375f, 0.05f), // erosion: low-moderate
-                Climate.Parameter.span(0.2f, 0.9f),     // depth: underground
-                Climate.Parameter.span(0.55f, 0.9f),    // weirdness: high (rare)
+                Climate.Parameter.span(0.45f, 0.9f),    // depth: narrowed for ~3x rarer
+                Climate.Parameter.span(0.7f, 0.9f),     // weirdness: narrowed for ~3x rarer
                 0L
             ),
             caves.get()

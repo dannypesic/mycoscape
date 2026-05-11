@@ -39,6 +39,7 @@ public class Mycoscape {
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             // Rotwood wood set
+            event.accept(new ItemStack(ModItems.ROTWOOD_LEAVES_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.ROTWOOD_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.STRIPPED_ROTWOOD_LOG_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.accept(new ItemStack(ModItems.ROTWOOD_WOOD_ITEM.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);

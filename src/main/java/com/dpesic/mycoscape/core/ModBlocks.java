@@ -275,6 +275,22 @@ public class ModBlocks {
             )
     );
 
+    public static final DeferredHolder<Block, TintedParticleLeavesBlock> ROTWOOD_LEAVES = BLOCKS.register(
+            "rotwood_leaves",
+            rn -> new TintedParticleLeavesBlock(
+                    0.02f,
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, rn))
+                            .strength(0.2f)
+                            .sound(SoundType.GRASS)
+                            .noOcclusion()
+                            .randomTicks()
+                            .isValidSpawn((state, level, pos, type) -> false)
+                            .isSuffocating((state, level, pos) -> false)
+                            .isViewBlocking((state, level, pos) -> false)
+            )
+    );
+
     // ---- Terrain & decoration -----------------------------------------------
 
     public static final DeferredHolder<Block, Block> FUNGAL_SUBSTRATE = BLOCKS.register(

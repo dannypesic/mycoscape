@@ -29,10 +29,12 @@ A NeoForge 1.21.11 Minecraft mod, forked from the legacy Mycoscape tech project,
 - [ ] **Death Vine**: crafted from Necroshroom + Necroshroom Hyphae; behaves like a cobweb but deals damage over time to anything caught in it
 
 ### Features & worldgen
-- [ ] Fungal Forest placed features wired into the biome generation settings (mushroom clusters, rotwood trees)
-- [ ] Custom rotwood tree feature using the existing `WallVeinFeature`
-- [ ] Surface biome containing primarily blewit trees with occasional morel trees
+- [x] Fungal Forest placed features wired into the biome generation settings (mushroom clusters, rotwood trees)
+- [x] Custom rotwood tree feature using the existing `WallVeinFeature`
+- [x] Surface biome containing primarily blewit trees with occasional morel trees
 - [ ] Jack o'Lantern mushrooms in the caves
+- [ ] Ground is fungal substrate
+- [ ] Ores in cave
 
 ### Release prep
 - [ ] `LICENSE`

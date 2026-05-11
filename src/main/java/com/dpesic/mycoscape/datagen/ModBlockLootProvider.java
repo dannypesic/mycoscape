@@ -27,6 +27,9 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
         // Hyphae: shears or silk touch only
         add(ModBlocks.NECROSHROOM_HYPHAE.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.NECROSHROOM_HYPHAE.get()));
 
+        // Rotwood leaves (shears or silk touch only — no sapling)
+        add(ModBlocks.ROTWOOD_LEAVES.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.ROTWOOD_LEAVES.get()));
+
         // Rotwood logs & wood
         dropSelf(ModBlocks.ROTWOOD.get());
         dropSelf(ModBlocks.STRIPPED_ROTWOOD_LOG.get());

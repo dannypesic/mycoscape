@@ -52,7 +52,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         // ---- Hoe-mineable ---------------------------------------------------
         tag(BlockTags.MINEABLE_WITH_HOE)
-                .add(ModBlocks.NECROSHROOM_HYPHAE.get());
+                .add(ModBlocks.NECROSHROOM_HYPHAE.get())
+                .add(ModBlocks.ROTWOOD_LEAVES.get());
+
+        // ---- Leaves ---------------------------------------------------------
+        tag(BlockTags.LEAVES)
+                .add(ModBlocks.ROTWOOD_LEAVES.get());
 
         // ---- Vanilla wood tags (for fire spread, crafting recipes, etc.) -----
         tag(BlockTags.LOGS_THAT_BURN)
@@ -92,7 +97,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(MycoscapeBlockTags.FUNGI_GROUND)
                 .addTag(BlockTags.DIRT)
                 .add(ModBlocks.FUNGAL_SUBSTRATE.get())
-                .add(ModBlocks.MYCOSLATE.get());
+                .add(ModBlocks.MYCOSLATE.get())
+                .add(ModBlocks.JACK_O_LANTERN_VEIN.get());
 
         tag(MycoscapeBlockTags.MYCOSLATE)
                 .add(ModBlocks.MYCOSLATE.get());

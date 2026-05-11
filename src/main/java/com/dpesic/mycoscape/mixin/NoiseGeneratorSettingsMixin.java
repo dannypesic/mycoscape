@@ -23,6 +23,14 @@ public class NoiseGeneratorSettingsMixin {
             SurfaceRules.state(ModBlocks.MYCOSLATE.get().defaultBlockState())
         );
 
-        cir.setReturnValue(SurfaceRules.sequence(mycoscaveRule, cir.getReturnValue()));
+        SurfaceRules.RuleSource mycoscapeSurfaceRule = SurfaceRules.ifTrue(
+            SurfaceRules.isBiome(ModBiomes.MYCOSCAPE_SURFACE),
+            SurfaceRules.ifTrue(
+                SurfaceRules.ON_FLOOR,
+                SurfaceRules.state(ModBlocks.FUNGAL_SUBSTRATE.get().defaultBlockState())
+            )
+        );
+
+        cir.setReturnValue(SurfaceRules.sequence(mycoscaveRule, mycoscapeSurfaceRule, cir.getReturnValue()));
     }
 }

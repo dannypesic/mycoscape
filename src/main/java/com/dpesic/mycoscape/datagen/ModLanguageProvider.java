@@ -27,6 +27,7 @@ public class ModLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.MUSHROOM_STEM,                  "Mushroom Stem");
 
         // ---- Rotwood wood set -----------------------------------------------
+        addBlock(ModBlocks.ROTWOOD_LEAVES,          "Rotwood Leaves");
         addBlock(ModBlocks.ROTWOOD,                 "Rotwood Log");
         addBlock(ModBlocks.STRIPPED_ROTWOOD_LOG,    "Stripped Rotwood Log");
         addBlock(ModBlocks.ROTWOOD_WOOD,            "Rotwood Wood");

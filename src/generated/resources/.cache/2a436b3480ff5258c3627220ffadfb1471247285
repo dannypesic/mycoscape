@@ -1,4 +1,4 @@
-// 1.21.11	2026-05-10T18:56:07.976321	Mycoscape Model Definitions
+// 1.21.11	2026-05-11T11:59:55.842785	Mycoscape Model Definitions
 896ed3ca68b0127bbb0a99696427bccaca7f08ac assets/mycoscape/blockstates/blewit_fungus.json
 4c57dbf6eb7ea24c045f9a6b015e315fc754bbc5 assets/mycoscape/blockstates/blewit_mushroom_cap.json
 227a6c9635e22edb7989e603c8c013e62b7d97df assets/mycoscape/blockstates/fungal_conduit.json
@@ -18,6 +18,7 @@ d3657e6909efb77126f2563dec23e0ab7cd19e05 assets/mycoscape/blockstates/rotwood.js
 0f85d6fbf0e6f3a90ffd16a106fa250a67529916 assets/mycoscape/blockstates/rotwood_door.json
 7b3e7a6055ca691a685f047fe68d47ec770e0ae7 assets/mycoscape/blockstates/rotwood_fence.json
 ff23f0060078cb8ecb882697cbd857733043f1ca assets/mycoscape/blockstates/rotwood_fence_gate.json
+4947c2107bcd20ae8d2375f3e90f3915104a44ec assets/mycoscape/blockstates/rotwood_leaves.json
 a1ea735c85cce9bb87414315c3f4b5346b2d0101 assets/mycoscape/blockstates/rotwood_planks.json
 8e74bcdef0519f018e47b7eb6215c4efc1efba81 assets/mycoscape/blockstates/rotwood_pressure_plate.json
 d910d1b0800379dbd106315c4cc74fa402f9be1a assets/mycoscape/blockstates/rotwood_slab.json
@@ -45,6 +46,7 @@ e81f0e0f09f5feea361f939941edd3d0c922fe94 assets/mycoscape/items/rotwood_button.j
 c16ca459bcfd33b5a5c5a677d1747b0e8a1838dd assets/mycoscape/items/rotwood_door.json
 1771e08fcf7cda370df09e2dada27aa519bfcdf6 assets/mycoscape/items/rotwood_fence.json
 9f16a86cbe618871cf704b52099c3cebfa207c09 assets/mycoscape/items/rotwood_fence_gate.json
+ae2c56332ace6a35bf4979a0b2bffb624eb07d4e assets/mycoscape/items/rotwood_leaves.json
 4952038bb76235f3a4d6353c8e16eff92b45aaf9 assets/mycoscape/items/rotwood_planks.json
 ed75553352a8d1d700dd3c930f7f2d268e7f051d assets/mycoscape/items/rotwood_pressure_plate.json
 d910e22ca4ebb4180602434f27faedf1ba134f0e assets/mycoscape/items/rotwood_slab.json
@@ -89,6 +91,7 @@ b767e3e51c455dd93a97ab3b6129182ba5fe06d9 assets/mycoscape/models/block/rotwood_f
 d27bccae3f0e3575de5815a0e99ff68d41ca7215 assets/mycoscape/models/block/rotwood_fence_inventory.json
 d08e85b552464b59aa91b8b10f4d3d0f431be099 assets/mycoscape/models/block/rotwood_fence_post.json
 da54e842f3aedef4f8fce250419e104c4ec18623 assets/mycoscape/models/block/rotwood_fence_side.json
+4f7f083003816c26fe32da25137e855c0e428d79 assets/mycoscape/models/block/rotwood_leaves.json
 54e3b8a3f1fd5d0ff9f14715bd6d784721f44001 assets/mycoscape/models/block/rotwood_planks.json
 dc20bc0bc6ebbe7adab8c526c9bf5280251f0959 assets/mycoscape/models/block/rotwood_pressure_plate.json
 4efdb4e2fe0f8e6005cc21d08ca6066d692b98a0 assets/mycoscape/models/block/rotwood_pressure_plate_down.json

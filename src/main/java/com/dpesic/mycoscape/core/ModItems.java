@@ -81,6 +81,9 @@ public class ModItems {
 
     // ---- Block Items: Rotwood wood set ----------------------------------------
 
+    public static final DeferredHolder<Item, BlockItem> ROTWOOD_LEAVES_ITEM =
+            registerBlockItem("rotwood_leaves", ModBlocks.ROTWOOD_LEAVES);
+
     public static final DeferredHolder<Item, BlockItem> ROTWOOD_ITEM =
             registerBlockItem("rotwood", ModBlocks.ROTWOOD);
 
