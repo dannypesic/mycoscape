@@ -17,12 +17,8 @@ runs
 run-data
 repo
 .DS_Store
-.claude
-CLAUDE.md
 .metadata
 .classpath
 build
 .gradle
 external_src
-FF_PLAN.md
-scrum

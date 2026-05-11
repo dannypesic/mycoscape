@@ -27,7 +27,7 @@ A NeoForge 1.21.11 Minecraft mod, forked from the legacy Mycoscape tech project,
 - [x] Translation
 
 ### Release prep
-- [ ] `LICENSE`
+- [x] `LICENSE`
 - [ ] `pack.png` mod icon (256×256)
 - [ ] CurseForge + Modrinth listings with screenshots
 
