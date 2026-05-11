@@ -1,0 +1,10 @@
+{
+  "values": {
+    "mycoscape:rotwood": {
+      "stripped_block": "mycoscape:stripped_rotwood_log"
+    },
+    "mycoscape:rotwood_wood": {
+      "stripped_block": "mycoscape:stripped_rotwood_wood"
+    }
+  }
+}

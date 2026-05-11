@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "mycoscape:block/rotwood_door_bottom",
+    "top": "mycoscape:block/rotwood_door_top"
+  }
+}

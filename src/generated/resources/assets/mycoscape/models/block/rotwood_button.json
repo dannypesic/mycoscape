@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "mycoscape:block/rotwood_planks"
+  }
+}

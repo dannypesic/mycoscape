@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:brown_mushroom",
+    "B": "mycoscape:morel",
+    "C": "minecraft:bone_meal",
+    "D": "mycoscape:blewit",
+    "E": "minecraft:rooted_dirt",
+    "F": "mycoscape:jack_o_lantern_mushroom",
+    "G": "minecraft:red_mushroom"
+  },
+  "pattern": [
+    "BDF",
+    "AEG",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mycoscape:fungal_substrate"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "mycoscape:mycoscape_caves",
+  "features": [
+    "mycoscape:jack_o_lantern_vein",
+    "mycoscape:necroshroom_hyphae_patch",
+    "mycoscape:necroshroom"
+  ],
+  "step": "vegetal_decoration"
+}

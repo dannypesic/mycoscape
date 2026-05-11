@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "mycoscape:stripped_rotwood_wood"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mycoscape:rotwood_planks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mycoscape:block/rotwood_slab"
+    },
+    "type=double": {
+      "model": "mycoscape:block/rotwood_planks"
+    },
+    "type=top": {
+      "model": "mycoscape:block/rotwood_slab_top"
+    }
+  }
+}

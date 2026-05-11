@@ -1,0 +1,22 @@
+{
+  "values": [
+    "mycoscape:rotwood",
+    "mycoscape:stripped_rotwood_log",
+    "mycoscape:rotwood_wood",
+    "mycoscape:stripped_rotwood_wood",
+    "mycoscape:rotwood_planks",
+    "mycoscape:rotwood_stairs",
+    "mycoscape:rotwood_slab",
+    "mycoscape:rotwood_fence",
+    "mycoscape:rotwood_fence_gate",
+    "mycoscape:rotwood_door",
+    "mycoscape:rotwood_trapdoor",
+    "mycoscape:rotwood_button",
+    "mycoscape:rotwood_pressure_plate",
+    "mycoscape:blewit_mushroom_cap",
+    "mycoscape:morel_mushroom_cap",
+    "mycoscape:jack_o_lantern_mushroom_cap",
+    "mycoscape:necroshroom_cap",
+    "mycoscape:mushroom_stem"
+  ]
+}

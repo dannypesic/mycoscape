@@ -1,0 +1,14 @@
+{
+  "type": "mycoscape:wall_vein",
+  "config": {
+    "state": {
+      "type": "minecraft:simple_state_provider",
+      "state": { "Name": "mycoscape:jack_o_lantern_vein" }
+    },
+    "min_length": 30,
+    "max_length": 50,
+    "branch_chance": 0.08,
+    "curve_chance": 0.25,
+    "replaceable": "mycoscape:mycoslate"
+  }
+}

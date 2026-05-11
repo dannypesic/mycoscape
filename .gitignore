@@ -1,0 +1,28 @@
+# eclipse
+bin
+*.launch
+.settings
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+# other
+eclipse
+run
+runs
+run-data
+repo
+.DS_Store
+.claude
+CLAUDE.md
+.metadata
+.classpath
+build
+.gradle
+external_src
+FF_PLAN.md
+scrum
