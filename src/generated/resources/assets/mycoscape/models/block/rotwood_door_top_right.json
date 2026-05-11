@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:block/door_top_right",
+  "render_type": "minecraft:cutout",
   "textures": {
     "bottom": "mycoscape:block/rotwood_door_bottom",
     "top": "mycoscape:block/rotwood_door_top"

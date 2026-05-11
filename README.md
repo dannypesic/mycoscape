@@ -21,22 +21,51 @@ A NeoForge 1.21.11 Minecraft mod, forked from the legacy Mycoscape tech project,
 ### Textures
 - [ ] Full rework of all existing placeholder textures (fungus grow stages, terrain blocks, mushroom caps)
 - [ ] New item textures: Mycelium Fabric, Death Vine, dried mushroom variants
-- [ ] Rotwood door and trapdoor texture polish
+- [x] Rotwood door and trapdoor texture polish
 
-### New blocks & items
-- [x] **Food items**: recipes, food values, and possibly custom effects
-- [x] **Mycelium Fabric**: craftable from mushrooms, used as a wool substitute for easy wool collection 
-- [x] **Death Vine**: crafted from Necroshroom + Necroshroom Hyphae; behaves like a cobweb but deals damage over time to anything caught in it
-
-### Features & worldgen
-- [x] Fungal Forest placed features wired into the biome generation settings (mushroom clusters, rotwood trees)
-- [x] Custom rotwood tree feature using the existing `WallVeinFeature`
-- [x] Surface biome containing primarily blewit trees with occasional morel trees
-- [x] Jack o'Lantern mushrooms in the caves
-- [x] Ground is fungal substrate
-- [x] Ores in cave
+- [ ] Fungal conduit to sapling
+- [x] Translation
 
 ### Release prep
 - [ ] `LICENSE`
 - [ ] `pack.png` mod icon (256×256)
 - [ ] CurseForge + Modrinth listings with screenshots
+
+
+### Textures List:
+item
+- [ ] mycelium_fabric.png
+- [ ] roasted_blewit.png
+- [ ] roasted jol
+- [ ] roasted morel
+- [ ] roasted necro
+- [ ] door
+block
+- [ ] blewit cap
+- [] death vine
+- [] fungal substrate
+- [] jol cap
+- [] jol vein
+- [] morel cap
+- [] mush stem
+- [] necro cap
+- [] rw button
+- [] rw door
+- [] rw door bottom
+- [] rw door top
+- [] rw fence
+- [] rw fence gate
+- [] rw leaves
+- [] rw planks
+- [] rw pressure plate
+- [] rwside
+- [] rw slab
+- [] rw stairs
+- [] rw top
+- [] rw trapdoor
+- [] rw wood side
+- [] rw wood top
+- [] stripped rw log s
+- [] stripped rw log t
+- [] strip rw wood s
+- [] strip rw wood r

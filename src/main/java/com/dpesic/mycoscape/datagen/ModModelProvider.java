@@ -266,18 +266,36 @@ public class ModModelProvider implements DataProvider {
         );
     }
 
+    private Identifier cutoutDoorModel(String variantSuffix, Identifier bottomTex, Identifier topTex,
+                                        Block door, BiConsumer<Identifier, ModelInstance> modelOutput) {
+        String blockPath = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(door).getPath();
+        Identifier id = Identifier.fromNamespaceAndPath(Mycoscape.MODID, "block/" + blockPath + "_" + variantSuffix);
+        modelOutput.accept(id, () -> {
+            JsonObject json = new JsonObject();
+            json.addProperty("render_type", "minecraft:cutout");
+            json.addProperty("parent", "minecraft:block/door_" + variantSuffix);
+            JsonObject textures = new JsonObject();
+            textures.addProperty("bottom", bottomTex.toString());
+            textures.addProperty("top", topTex.toString());
+            json.add("textures", textures);
+            return json;
+        });
+        return id;
+    }
+
     private void rotwoodDoor(Block door,
                               Consumer<BlockModelDefinitionGenerator> bsOutput,
                               BiConsumer<Identifier, ModelInstance> modelOutput) {
-        TextureMapping mapping = TextureMapping.door(door);
-        MultiVariant bl  = mv(ModelTemplates.DOOR_BOTTOM_LEFT.create(door, mapping, modelOutput));
-        MultiVariant blo = mv(ModelTemplates.DOOR_BOTTOM_LEFT_OPEN.create(door, mapping, modelOutput));
-        MultiVariant br  = mv(ModelTemplates.DOOR_BOTTOM_RIGHT.create(door, mapping, modelOutput));
-        MultiVariant bro = mv(ModelTemplates.DOOR_BOTTOM_RIGHT_OPEN.create(door, mapping, modelOutput));
-        MultiVariant tl  = mv(ModelTemplates.DOOR_TOP_LEFT.create(door, mapping, modelOutput));
-        MultiVariant tlo = mv(ModelTemplates.DOOR_TOP_LEFT_OPEN.create(door, mapping, modelOutput));
-        MultiVariant tr  = mv(ModelTemplates.DOOR_TOP_RIGHT.create(door, mapping, modelOutput));
-        MultiVariant tro = mv(ModelTemplates.DOOR_TOP_RIGHT_OPEN.create(door, mapping, modelOutput));
+        Identifier bottomTex = TextureMapping.getBlockTexture(door, "_bottom");
+        Identifier topTex    = TextureMapping.getBlockTexture(door, "_top");
+        MultiVariant bl  = mv(cutoutDoorModel("bottom_left",       bottomTex, topTex, door, modelOutput));
+        MultiVariant blo = mv(cutoutDoorModel("bottom_left_open",  bottomTex, topTex, door, modelOutput));
+        MultiVariant br  = mv(cutoutDoorModel("bottom_right",      bottomTex, topTex, door, modelOutput));
+        MultiVariant bro = mv(cutoutDoorModel("bottom_right_open", bottomTex, topTex, door, modelOutput));
+        MultiVariant tl  = mv(cutoutDoorModel("top_left",          bottomTex, topTex, door, modelOutput));
+        MultiVariant tlo = mv(cutoutDoorModel("top_left_open",     bottomTex, topTex, door, modelOutput));
+        MultiVariant tr  = mv(cutoutDoorModel("top_right",         bottomTex, topTex, door, modelOutput));
+        MultiVariant tro = mv(cutoutDoorModel("top_right_open",    bottomTex, topTex, door, modelOutput));
         bsOutput.accept(MultiVariantGenerator.dispatch(door).with(
             PropertyDispatch.initial(BlockStateProperties.HORIZONTAL_FACING, BlockStateProperties.DOUBLE_BLOCK_HALF,
                                      BlockStateProperties.DOOR_HINGE, BlockStateProperties.OPEN)
@@ -316,15 +334,31 @@ public class ModModelProvider implements DataProvider {
         ));
     }
 
+    private Identifier cutoutTrapdoorModel(String variantSuffix, Identifier tex,
+                                            Block trapdoor, BiConsumer<Identifier, ModelInstance> modelOutput) {
+        String blockPath = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(trapdoor).getPath();
+        Identifier id = Identifier.fromNamespaceAndPath(Mycoscape.MODID, "block/" + blockPath + "_" + variantSuffix);
+        modelOutput.accept(id, () -> {
+            JsonObject json = new JsonObject();
+            json.addProperty("render_type", "minecraft:cutout");
+            json.addProperty("parent", "minecraft:block/template_orientable_trapdoor_" + variantSuffix);
+            JsonObject textures = new JsonObject();
+            textures.addProperty("texture", tex.toString());
+            json.add("textures", textures);
+            return json;
+        });
+        return id;
+    }
+
     private void rotwoodTrapdoor(Block trapdoor,
                                   Consumer<BlockModelDefinitionGenerator> bsOutput,
                                   BiConsumer<Identifier, ModelInstance> modelOutput,
                                   ItemModelOutput itemOutput) {
-        TextureMapping mapping = TextureMapping.defaultTexture(trapdoor);
-        MultiVariant top    = mv(ModelTemplates.ORIENTABLE_TRAPDOOR_TOP.create(trapdoor, mapping, modelOutput));
-        Identifier bottomId = ModelTemplates.ORIENTABLE_TRAPDOOR_BOTTOM.create(trapdoor, mapping, modelOutput);
+        Identifier tex      = TextureMapping.getBlockTexture(trapdoor);
+        MultiVariant top    = mv(cutoutTrapdoorModel("top",    tex, trapdoor, modelOutput));
+        Identifier bottomId =    cutoutTrapdoorModel("bottom", tex, trapdoor, modelOutput);
         MultiVariant bottom = mv(bottomId);
-        MultiVariant open   = mv(ModelTemplates.ORIENTABLE_TRAPDOOR_OPEN.create(trapdoor, mapping, modelOutput));
+        MultiVariant open   = mv(cutoutTrapdoorModel("open",   tex, trapdoor, modelOutput));
         bsOutput.accept(MultiVariantGenerator.dispatch(trapdoor).with(
             PropertyDispatch.initial(BlockStateProperties.HORIZONTAL_FACING, BlockStateProperties.HALF, BlockStateProperties.OPEN)
                 .select(Direction.NORTH, Half.BOTTOM, false, bottom)
