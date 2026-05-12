@@ -48,17 +48,15 @@ public abstract class AbstractMushroomItem extends Item {
         }
 
         if (!level.isClientSide()) {
-            BlockState plantState = placeBlockstate();
+            BlockState plantState = groundState.is(ModBlocks.ROTWOOD)
+                    ? ModBlocks.NECROSHROOM_FUNGUS.get().defaultBlockState()
+                    : placeBlockstate();
+
             if (!plantState.canSurvive(level, placePos)) {
                 return InteractionResult.PASS;
             }
 
-            if (groundState.is(ModBlocks.ROTWOOD)) {
-                level.setBlock(placePos, ModBlocks.NECROSHROOM_FUNGUS.get().defaultBlockState(), 3);
-            }
-            else {
-                level.setBlock(placePos, plantState, 3);
-            }
+            level.setBlock(placePos, plantState, 3);
 
             level.playSound(null, placePos, SoundEvents.ROOTS_PLACE, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             ItemStack stack = ctx.getItemInHand();

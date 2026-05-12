@@ -99,6 +99,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         
         tag(MycoscapeBlockTags.FUNGI_GROUND)
                 .addTag(BlockTags.DIRT)
+                .addTag(MycoscapeBlockTags.ROTWOOD)
                 .add(ModBlocks.OVERGROWN_GRASS.get())
                 .add(ModBlocks.MYCOSLATE.get())
                 .add(ModBlocks.JACK_O_LANTERN_VEIN.get());

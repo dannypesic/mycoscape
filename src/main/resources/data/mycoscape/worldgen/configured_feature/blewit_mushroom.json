@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:huge_red_mushroom",
+  "type": "mycoscape:huge_blewit_mushroom",
   "config": {
     "cap_provider": {
       "type": "minecraft:simple_state_provider",
@@ -29,6 +29,6 @@
         }
       }
     },
-    "foliage_radius": 2
+    "foliage_radius": 3
   }
 }
