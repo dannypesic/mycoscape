@@ -34,8 +34,6 @@ public class ModCreativeTabs {
                         output.accept(ModItems.MOREL_MUSHROOM_CAP_ITEM.get());
                         output.accept(ModItems.JACK_O_LANTERN_MUSHROOM_CAP_ITEM.get());
                         output.accept(ModItems.NECROSHROOM_CAP_ITEM.get());
-                        output.accept(ModItems.MUSHROOM_STEM_ITEM.get());
-
                         output.accept(ModItems.ROTWOOD_SAPLING_ITEM.get());
                         output.accept(ModItems.ROTWOOD_LEAVES_ITEM.get());
                         output.accept(ModItems.ROTWOOD_ITEM.get());
@@ -52,7 +50,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.ROTWOOD_BUTTON_ITEM.get());
                         output.accept(ModItems.ROTWOOD_PRESSURE_PLATE_ITEM.get());
 
-                        output.accept(ModItems.FUNGAL_SUBSTRATE_ITEM.get());
+                        output.accept(ModItems.OVERGROWN_GRASS_ITEM.get());
                         output.accept(ModItems.MYCOSLATE_ITEM.get());
                         output.accept(ModItems.NECROSHROOM_HYPHAE_ITEM.get());
                         output.accept(ModItems.JACK_O_LANTERN_VEIN_ITEM.get());

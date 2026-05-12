@@ -36,8 +36,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLEWIT_MUSHROOM_CAP.get())
                 .add(ModBlocks.MOREL_MUSHROOM_CAP.get())
                 .add(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get())
-                .add(ModBlocks.NECROSHROOM_CAP.get())
-                .add(ModBlocks.MUSHROOM_STEM.get());
+                .add(ModBlocks.NECROSHROOM_CAP.get());
 
         
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
@@ -48,7 +47,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.FUNGAL_SUBSTRATE.get());
+                .add(ModBlocks.OVERGROWN_GRASS.get());
+
+        tag(BlockTags.DIRT)
+                .add(ModBlocks.OVERGROWN_GRASS.get());
 
         
         tag(BlockTags.MINEABLE_WITH_HOE)
@@ -97,7 +99,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         
         tag(MycoscapeBlockTags.FUNGI_GROUND)
                 .addTag(BlockTags.DIRT)
-                .add(ModBlocks.FUNGAL_SUBSTRATE.get())
+                .add(ModBlocks.OVERGROWN_GRASS.get())
                 .add(ModBlocks.MYCOSLATE.get())
                 .add(ModBlocks.JACK_O_LANTERN_VEIN.get());
 
@@ -118,7 +120,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.MUSHROOM_GROW_BLOCK)
                 .add(ModBlocks.MYCOSLATE.get())
-                .add(ModBlocks.FUNGAL_SUBSTRATE.get())
+                .add(ModBlocks.OVERGROWN_GRASS.get())
                 .addTag(MycoscapeBlockTags.ROTWOOD);
     }
 }

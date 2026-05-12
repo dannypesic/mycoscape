@@ -20,7 +20,7 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
     @Override
     protected void generate() {
         
-        dropSelf(ModBlocks.FUNGAL_SUBSTRATE.get());
+        dropSelf(ModBlocks.OVERGROWN_GRASS.get());
         dropSelf(ModBlocks.MYCOSLATE.get());
         dropSelf(ModBlocks.JACK_O_LANTERN_VEIN.get());
 
@@ -56,7 +56,6 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
         add(ModBlocks.MOREL_MUSHROOM_CAP.get(), createMushroomBlockDrop(ModBlocks.MOREL_MUSHROOM_CAP.get(), ModItems.MOREL.get()));
         add(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get(), createMushroomBlockDrop(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get(), ModItems.JACK_O_LANTERN_MUSHROOM.get()));
         dropSelf(ModBlocks.NECROSHROOM_CAP.get());
-        dropSelf(ModBlocks.MUSHROOM_STEM.get());
     }
 
     @Override

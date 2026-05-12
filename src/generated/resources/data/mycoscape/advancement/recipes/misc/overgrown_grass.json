@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mycoscape:fungal_substrate"
+        "recipe": "mycoscape:overgrown_grass"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mycoscape:fungal_substrate"
+      "mycoscape:overgrown_grass"
     ]
   }
 }

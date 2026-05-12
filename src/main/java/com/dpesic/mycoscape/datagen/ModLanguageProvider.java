@@ -36,12 +36,10 @@ public class ModLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.MOREL_MUSHROOM_CAP,             "Morel Mushroom Cap");
         addBlock(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP,    "Jack o'Lantern Mushroom Cap");
         addBlock(ModBlocks.NECROSHROOM_CAP,                "Necroshroom Cap");
-        addBlock(ModBlocks.MUSHROOM_STEM,                  "Mushroom Stem");
         addItem(ModItems.BLEWIT_MUSHROOM_CAP_ITEM,         "Blewit Mushroom Cap");
         addItem(ModItems.MOREL_MUSHROOM_CAP_ITEM,          "Morel Mushroom Cap");
         addItem(ModItems.JACK_O_LANTERN_MUSHROOM_CAP_ITEM, "Jack o'Lantern Mushroom Cap");
         addItem(ModItems.NECROSHROOM_CAP_ITEM,             "Necroshroom Cap");
-        addItem(ModItems.MUSHROOM_STEM_ITEM,               "Mushroom Stem");
 
         addBlock(ModBlocks.ROTWOOD_SAPLING,         "Rotwood Sapling");
         addBlock(ModBlocks.ROTWOOD_LEAVES,          "Rotwood Leaves");
@@ -74,12 +72,12 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.ROTWOOD_BUTTON_ITEM,           "Rotwood Button");
         addItem(ModItems.ROTWOOD_PRESSURE_PLATE_ITEM,   "Rotwood Pressure Plate");
 
-        addBlock(ModBlocks.FUNGAL_SUBSTRATE,        "Fungal Substrate");
+        addBlock(ModBlocks.OVERGROWN_GRASS,        "Overgrown Grass");
         addBlock(ModBlocks.MYCOSLATE,               "Mycoslate");
         addBlock(ModBlocks.NECROSHROOM_HYPHAE,      "Necroshroom Hyphae");
         addBlock(ModBlocks.JACK_O_LANTERN_VEIN,     "Jack o'Lantern Vein");
 addBlock(ModBlocks.DEATH_VINE,              "Death Vine");
-        addItem(ModItems.FUNGAL_SUBSTRATE_ITEM,     "Fungal Substrate");
+        addItem(ModItems.OVERGROWN_GRASS_ITEM,     "Overgrown Grass");
         addItem(ModItems.MYCOSLATE_ITEM,            "Mycoslate");
         addItem(ModItems.NECROSHROOM_HYPHAE_ITEM,   "Necroshroom Hyphae");
         addItem(ModItems.JACK_O_LANTERN_VEIN_ITEM,  "Jack o'Lantern Vein");

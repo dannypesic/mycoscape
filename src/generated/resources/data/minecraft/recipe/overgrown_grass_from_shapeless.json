@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dirt",
+    "minecraft:short_grass"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mycoscape:overgrown_grass"
+  }
+}

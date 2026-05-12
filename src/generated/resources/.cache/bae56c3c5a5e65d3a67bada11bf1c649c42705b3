@@ -1,13 +1,14 @@
-// 1.21.11	2026-05-11T13:33:04.28277	Tags for minecraft:block mod id mycoscape
+// 1.21.11	2026-05-11T19:08:06.994623	Tags for minecraft:block mod id mycoscape
 b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/deepslate_ore_replaceables.json
+50635fb1e12543df8f96e90d24718158841b805f data/minecraft/tags/block/dirt.json
 ee895e04815c320f3760ecf67628a8bd746f3b14 data/minecraft/tags/block/fence_gates.json
 9b94d899542ee081dff78b1d5cf3171a783ba8df data/minecraft/tags/block/leaves.json
 72270c7954d8e812f26caadb825c290bb2b950f7 data/minecraft/tags/block/logs_that_burn.json
-c3b21432c1afc124c5b9fe137f5700cdef83ba04 data/minecraft/tags/block/mineable/axe.json
+6e210ab19fd8223cba85fb6a2b3b5d51d8583180 data/minecraft/tags/block/mineable/axe.json
 e63fecd606026d9344b28fb861c3bafeb9f02aa2 data/minecraft/tags/block/mineable/hoe.json
 b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/mineable/pickaxe.json
-fa899419a82395cd4da6bc8a8f7e540c7c3e86af data/minecraft/tags/block/mineable/shovel.json
-0c3a81c758d67ab92750c8a4b40da9e34d1d5450 data/minecraft/tags/block/mushroom_grow_block.json
+50635fb1e12543df8f96e90d24718158841b805f data/minecraft/tags/block/mineable/shovel.json
+2f56b33726c77094151f9833d4cb53edb986a699 data/minecraft/tags/block/mushroom_grow_block.json
 b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/needs_stone_tool.json
 30aea22538edfafc726464701e1bb23ff6223ee9 data/minecraft/tags/block/planks.json
 b9a94715e23fe10e91285e34f57874ff062885f8 data/minecraft/tags/block/stone_ore_replaceables.json
@@ -18,6 +19,6 @@ bc92a6820f0c6d7b958c48a90b65631fecdceb1a data/minecraft/tags/block/wooden_doors.
 008b258e7665ed85f2c7ee2decec945b06432553 data/minecraft/tags/block/wooden_slabs.json
 471ab7215bbf18c7299b835b6ba01d9c57ce28a7 data/minecraft/tags/block/wooden_stairs.json
 947f0bc5cdbe6f2db9073c28eed6d7a2f2f81329 data/minecraft/tags/block/wooden_trapdoors.json
-1fe9cf2cfeb70c7c0516ad431036a16c918b6d0d data/mycoscape/tags/block/fungi_ground.json
+2aba46ecb5af2e4c9856dda85bfd2dea3d0f49da data/mycoscape/tags/block/fungi_ground.json
 b9a94715e23fe10e91285e34f57874ff062885f8 data/mycoscape/tags/block/mycoslate.json
 72270c7954d8e812f26caadb825c290bb2b950f7 data/mycoscape/tags/block/rotwood.json

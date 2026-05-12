@@ -1,14 +1,13 @@
-// 1.21.11	2026-05-11T14:22:39.384796	Loot Tables
+// 1.21.11	2026-05-11T19:08:06.99536	Loot Tables
 8ba0ecb5d0c060e6ac4d47ca68ca6275cc1a0e43 data/mycoscape/loot_table/blocks/blewit_mushroom_cap.json
 18ea351b352565b58a40d0662cf27c4180793a5f data/mycoscape/loot_table/blocks/death_vine.json
-d2ded892435e80034d985bcc256c6c246f9a32bc data/mycoscape/loot_table/blocks/fungal_substrate.json
 2103e92618489d798d19eaa3c05753a885c1a580 data/mycoscape/loot_table/blocks/jack_o_lantern_mushroom_cap.json
 629e5ce76026123e4ab0ff9bdc2046d023d621ae data/mycoscape/loot_table/blocks/jack_o_lantern_vein.json
 e97cbb3e8ee2fe6f7997b47d1c3e0028f28ef72a data/mycoscape/loot_table/blocks/morel_mushroom_cap.json
-b597f7b1fc8be5a5c67061f710730ef3359a91d2 data/mycoscape/loot_table/blocks/mushroom_stem.json
 7365c374dc4441ab0d717ab1342ca5f4fd247ab7 data/mycoscape/loot_table/blocks/mycoslate.json
 cdfaa8e397cf300b0f9d1dbb8340e23afeee7f26 data/mycoscape/loot_table/blocks/necroshroom_cap.json
 8068c5997b5d7084d7c9654b2794056d2d2a0d6e data/mycoscape/loot_table/blocks/necroshroom_hyphae.json
+b9901b6d07870fff8c0ad0786f7ba794bd9ecd4c data/mycoscape/loot_table/blocks/overgrown_grass.json
 9b489f3a567e5618bcf2a184ea1f07c09b57bb6e data/mycoscape/loot_table/blocks/rotwood.json
 c312fc3012903a22c094da6f7c8f05d8e43cf8cf data/mycoscape/loot_table/blocks/rotwood_button.json
 fc9acb4fce04529b0ee22ff08bb53cee307942ac data/mycoscape/loot_table/blocks/rotwood_door.json

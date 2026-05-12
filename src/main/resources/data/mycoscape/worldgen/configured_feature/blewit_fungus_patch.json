@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 48,
+    "xspread": 4,
+    "yspread": 0,
+    "zspread": 4,
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "mycoscape:blewit_fungus",
+              "Properties": {
+                "age": "0"
+              }
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:replaceable"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_block_tag",
+            "offset": [0, -1, 0],
+            "tag": "mycoscape:fungi_ground"
+          }
+        }
+      ]
+    }
+  }
+}

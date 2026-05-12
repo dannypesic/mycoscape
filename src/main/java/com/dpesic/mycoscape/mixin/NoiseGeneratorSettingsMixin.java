@@ -27,7 +27,7 @@ public class NoiseGeneratorSettingsMixin {
             SurfaceRules.isBiome(ModBiomes.MYCOSCAPE_SURFACE),
             SurfaceRules.ifTrue(
                 SurfaceRules.ON_FLOOR,
-                SurfaceRules.state(ModBlocks.FUNGAL_SUBSTRATE.get().defaultBlockState())
+                SurfaceRules.state(ModBlocks.OVERGROWN_GRASS.get().defaultBlockState())
             )
         );
 

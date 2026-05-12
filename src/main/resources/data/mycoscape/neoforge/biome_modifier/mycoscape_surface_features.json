@@ -5,7 +5,11 @@
     "mycoscape:rotwood_tree",
     "mycoscape:jack_o_lantern_vein",
     "mycoscape:blewit_mushroom",
-    "mycoscape:morel_mushroom"
+    "mycoscape:morel_mushroom",
+    "mycoscape:blewit_fungus_patch",
+    "mycoscape:morel_fungus_patch",
+    "mycoscape:surface_grass_patch",
+    "mycoscape:rotwood_leaf_litter"
   ],
   "step": "vegetal_decoration"
 }

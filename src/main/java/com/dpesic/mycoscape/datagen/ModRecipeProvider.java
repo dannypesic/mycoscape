@@ -174,7 +174,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(output, "roasted_necroshroom_from_smoking");
 
         
-        ShapedRecipeBuilder.shaped(items, RecipeCategory.MISC, ModItems.FUNGAL_SUBSTRATE_ITEM.get())
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.MISC, ModItems.OVERGROWN_GRASS_ITEM.get())
                 .define('A', Items.BROWN_MUSHROOM)
                 .define('B', ModItems.MOREL.get())
                 .define('C', Items.BONE_MEAL)
@@ -187,6 +187,12 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("CCC")
                 .unlockedBy("has_blewit", has(ModItems.BLEWIT.get()))
                 .save(output);
+
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.OVERGROWN_GRASS_ITEM.get())
+                .requires(Items.DIRT)
+                .requires(Items.SHORT_GRASS)
+                .unlockedBy("has_dirt", has(Items.DIRT))
+                .save(output, "overgrown_grass_from_shapeless");
     }
 
     public static class Runner extends RecipeProvider.Runner {

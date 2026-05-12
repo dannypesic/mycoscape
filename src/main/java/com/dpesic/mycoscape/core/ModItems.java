@@ -159,11 +159,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> NECROSHROOM_CAP_ITEM =
             registerBlockItem("necroshroom_cap", ModBlocks.NECROSHROOM_CAP);
 
-    public static final DeferredHolder<Item, BlockItem> MUSHROOM_STEM_ITEM =
-            registerBlockItem("mushroom_stem", ModBlocks.MUSHROOM_STEM);
 
-
-    
 
     public static final DeferredHolder<Item, BlockItem> ROTWOOD_SAPLING_ITEM =
             registerBlockItem("rotwood_sapling", ModBlocks.ROTWOOD_SAPLING);
@@ -212,8 +208,8 @@ public class ModItems {
 
     
 
-    public static final DeferredHolder<Item, BlockItem> FUNGAL_SUBSTRATE_ITEM =
-            registerBlockItem("fungal_substrate", ModBlocks.FUNGAL_SUBSTRATE);
+    public static final DeferredHolder<Item, BlockItem> OVERGROWN_GRASS_ITEM =
+            registerBlockItem("overgrown_grass", ModBlocks.OVERGROWN_GRASS);
 
     public static final DeferredHolder<Item, BlockItem> MYCOSLATE_ITEM =
             registerBlockItem("mycoslate", ModBlocks.MYCOSLATE);

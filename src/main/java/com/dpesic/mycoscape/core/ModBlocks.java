@@ -116,17 +116,6 @@ public class ModBlocks {
             )
     );
 
-    public static final DeferredHolder<Block, HugeMushroomBlock> MUSHROOM_STEM = BLOCKS.register(
-            "mushroom_stem",
-            rn -> new HugeMushroomBlock(
-                    BlockBehaviour.Properties.of()
-                            .setId(ResourceKey.create(Registries.BLOCK, rn))
-                            .strength(0.2f)
-                            .sound(SoundType.WOOD)
-            )
-    );
-
-    
 
     public static final DeferredHolder<Block, RotatedPillarBlock> ROTWOOD = BLOCKS.register(
             "rotwood",
@@ -302,9 +291,9 @@ public class ModBlocks {
             )
     );
 
-    public static final DeferredHolder<Block, TintedParticleLeavesBlock> ROTWOOD_LEAVES = BLOCKS.register(
+    public static final DeferredHolder<Block, RotwoodLeavesBlock> ROTWOOD_LEAVES = BLOCKS.register(
             "rotwood_leaves",
-            rn -> new TintedParticleLeavesBlock(
+            rn -> new RotwoodLeavesBlock(
                     0.02f,
                     BlockBehaviour.Properties.of()
                             .setId(ResourceKey.create(Registries.BLOCK, rn))
@@ -320,8 +309,8 @@ public class ModBlocks {
 
     
 
-    public static final DeferredHolder<Block, Block> FUNGAL_SUBSTRATE = BLOCKS.register(
-            "fungal_substrate",
+    public static final DeferredHolder<Block, Block> OVERGROWN_GRASS = BLOCKS.register(
+            "overgrown_grass",
             rn -> new Block(
                     BlockBehaviour.Properties.of()
                             .setId(ResourceKey.create(Registries.BLOCK, rn))

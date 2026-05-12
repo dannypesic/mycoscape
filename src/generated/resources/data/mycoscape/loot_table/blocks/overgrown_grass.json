@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mycoscape:fungal_substrate"
+          "name": "mycoscape:overgrown_grass"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "mycoscape:blocks/fungal_substrate"
+  "random_sequence": "mycoscape:blocks/overgrown_grass"
 }

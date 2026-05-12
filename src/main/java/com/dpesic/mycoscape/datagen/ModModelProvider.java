@@ -117,7 +117,7 @@ public class ModModelProvider implements DataProvider {
                                  BiConsumer<Identifier, ModelInstance> modelOutput,
                                  ItemModelOutput itemOutput) {
         
-        bmg.createTrivialCube(ModBlocks.FUNGAL_SUBSTRATE.get());
+        overgrownGrassBlock(ModBlocks.OVERGROWN_GRASS.get(), bsOutput, modelOutput);
         bmg.createTrivialCube(ModBlocks.JACK_O_LANTERN_VEIN.get());
         bmg.createTrivialCube(ModBlocks.MYCOSLATE.get());
         bmg.createTrivialCube(ModBlocks.ROTWOOD_PLANKS.get());
@@ -147,7 +147,6 @@ public class ModModelProvider implements DataProvider {
         bmg.createTrivialCube(ModBlocks.MOREL_MUSHROOM_CAP.get());
         bmg.createTrivialCube(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get());
         bmg.createTrivialCube(ModBlocks.NECROSHROOM_CAP.get());
-        bmg.createTrivialCube(ModBlocks.MUSHROOM_STEM.get());
 
         fungusBlock(ModBlocks.BLEWIT_FUNGUS.get(), bsOutput, modelOutput);
         fungusBlock(ModBlocks.MOREL_FUNGUS.get(), bsOutput, modelOutput);
@@ -165,6 +164,43 @@ public class ModModelProvider implements DataProvider {
     }
 
     
+
+    private void overgrownGrassBlock(Block block,
+                                       Consumer<BlockModelDefinitionGenerator> bsOutput,
+                                       BiConsumer<Identifier, ModelInstance> modelOutput) {
+        Identifier modelId = ModelLocationUtils.getModelLocation(block);
+        modelOutput.accept(modelId, () -> {
+            JsonObject json = new JsonObject();
+            json.addProperty("parent", "minecraft:block/block");
+            JsonObject textures = new JsonObject();
+            textures.addProperty("particle", "minecraft:block/grass_block_top");
+            textures.addProperty("all", "minecraft:block/grass_block_top");
+            json.add("textures", textures);
+            com.google.gson.JsonArray elements = new com.google.gson.JsonArray();
+            JsonObject element = new JsonObject();
+            element.add("from", jsonArr(0, 0, 0));
+            element.add("to", jsonArr(16, 16, 16));
+            JsonObject faces = new JsonObject();
+            for (String face : new String[]{"down", "up", "north", "south", "west", "east"}) {
+                JsonObject f = new JsonObject();
+                f.add("uv", jsonArr(0, 0, 16, 16));
+                f.addProperty("texture", "#all");
+                f.addProperty("tintindex", 0);
+                faces.add(face, f);
+            }
+            element.add("faces", faces);
+            elements.add(element);
+            json.add("elements", elements);
+            return json;
+        });
+        bsOutput.accept(MultiVariantGenerator.dispatch(block, mv(modelId)));
+    }
+
+    private static com.google.gson.JsonArray jsonArr(int... vals) {
+        com.google.gson.JsonArray arr = new com.google.gson.JsonArray();
+        for (int v : vals) arr.add(v);
+        return arr;
+    }
 
     private void rotwoodStairs(Block stairs, TextureMapping mapping,
                                 Consumer<BlockModelDefinitionGenerator> bsOutput,
@@ -536,9 +572,12 @@ public class ModModelProvider implements DataProvider {
         blockItem(ModItems.MOREL_MUSHROOM_CAP_ITEM.get(), ModBlocks.MOREL_MUSHROOM_CAP.get(), itemOutput);
         blockItem(ModItems.JACK_O_LANTERN_MUSHROOM_CAP_ITEM.get(), ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get(), itemOutput);
         blockItem(ModItems.NECROSHROOM_CAP_ITEM.get(), ModBlocks.NECROSHROOM_CAP.get(), itemOutput);
-        blockItem(ModItems.MUSHROOM_STEM_ITEM.get(), ModBlocks.MUSHROOM_STEM.get(), itemOutput);
 
-        blockItem(ModItems.FUNGAL_SUBSTRATE_ITEM.get(), ModBlocks.FUNGAL_SUBSTRATE.get(), itemOutput);
+        itemOutput.accept(ModItems.OVERGROWN_GRASS_ITEM.get(),
+            ItemModelUtils.tintedModel(
+                ModelLocationUtils.getModelLocation(ModBlocks.OVERGROWN_GRASS.get()),
+                new net.minecraft.client.color.item.GrassColorSource(0.6f, 0.8f)
+            ));
         blockItem(ModItems.MYCOSLATE_ITEM.get(), ModBlocks.MYCOSLATE.get(), itemOutput);
         blockItem(ModItems.NECROSHROOM_HYPHAE_ITEM.get(), ModBlocks.NECROSHROOM_HYPHAE.get(), itemOutput);
         blockItem(ModItems.JACK_O_LANTERN_VEIN_ITEM.get(), ModBlocks.JACK_O_LANTERN_VEIN.get(), itemOutput);
