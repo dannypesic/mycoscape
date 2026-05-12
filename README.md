@@ -23,16 +23,12 @@ item
 - [ ] roasted jol
 - [ ] roasted morel
 - [ ] roasted necro
-- [ ] door
 block
 - [ ] death vine
 - [ ] blewit cap
 - [ ] jol cap
 - [ ] morel cap
 - [ ] necro cap
-- [ ] rw door
-- [ ] rw door bottom
-- [ ] rw door top
 - [ ] rw trapdoor
 - [ ] stripped rw log s
 - [ ] stripped rw log t

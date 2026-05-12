@@ -38,7 +38,7 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
         return !placed.isEmpty();
     }
 
-    
+
 
     private void walk(WorldGenLevel level, RandomSource random, BlockPos start,
                       Direction primary, Direction[] driftAxes, int maxSteps,
@@ -50,12 +50,12 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
             BlockPos next;
 
             if (random.nextFloat() < config.curveChance()) {
-                
-                
+
+
                 Direction drift = driftAxes[random.nextInt(driftAxes.length)];
                 next = pos.relative(drift);
             } else {
-                
+
                 next = pos.relative(primary);
             }
 
@@ -63,7 +63,7 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
                 pos = next;
                 failStreak = 0;
 
-                
+
                 if (depth < 1 && random.nextFloat() < config.branchChance()) {
                     Direction branchDrift = driftAxes[random.nextInt(driftAxes.length)];
                     BlockPos branchStart = pos.relative(branchDrift);
@@ -73,7 +73,7 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
                 continue;
             }
 
-            
+
             boolean recovered = false;
             for (Direction altDrift : driftAxes) {
                 BlockPos alt = pos.relative(altDrift);
@@ -85,14 +85,14 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
                 }
             }
             if (!recovered) {
-                
+
                 pos = pos.relative(primary);
                 failStreak++;
             }
         }
     }
 
-    
+
 
     private boolean tryPlace(WorldGenLevel level, RandomSource random, BlockPos pos,
                              WallVeinFeatureConfiguration config, Set<BlockPos> placed) {
@@ -110,7 +110,7 @@ public class WallVeinFeature extends Feature<WallVeinFeatureConfiguration> {
         return true;
     }
 
-    
+
 
     private int countAdjacentVein(BlockPos pos, Set<BlockPos> placed) {
         int count = 0;

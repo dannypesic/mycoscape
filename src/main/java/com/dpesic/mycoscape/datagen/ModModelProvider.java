@@ -50,7 +50,7 @@ import java.util.function.Function;
 
 public class ModModelProvider implements DataProvider {
 
-    
+
     private static final VariantMutator UV_LOCK     = VariantMutator.UV_LOCK.withValue(true);
     private static final VariantMutator NOP          = v -> v;
     private static final VariantMutator Y_ROT_90    = VariantMutator.Y_ROT.withValue(Quadrant.R90);
@@ -58,7 +58,7 @@ public class ModModelProvider implements DataProvider {
     private static final VariantMutator Y_ROT_270   = VariantMutator.Y_ROT.withValue(Quadrant.R270);
     private static final VariantMutator X_ROT_90    = VariantMutator.X_ROT.withValue(Quadrant.R90);
     private static final VariantMutator X_ROT_180   = VariantMutator.X_ROT.withValue(Quadrant.R180);
-    
+
     private static final PropertyDispatch<VariantMutator> ROTATION_HORIZONTAL_FACING_ALT =
         PropertyDispatch.modify(BlockStateProperties.HORIZONTAL_FACING)
             .select(Direction.SOUTH, NOP)
@@ -116,22 +116,22 @@ public class ModModelProvider implements DataProvider {
                                  Consumer<BlockModelDefinitionGenerator> bsOutput,
                                  BiConsumer<Identifier, ModelInstance> modelOutput,
                                  ItemModelOutput itemOutput) {
-        
+
         overgrownGrassBlock(ModBlocks.OVERGROWN_GRASS.get(), bsOutput, modelOutput);
         bmg.createTrivialCube(ModBlocks.JACK_O_LANTERN_VEIN.get());
         bmg.createTrivialCube(ModBlocks.MYCOSLATE.get());
         bmg.createTrivialCube(ModBlocks.ROTWOOD_PLANKS.get());
 
-        
+
         leavesBlock(ModBlocks.ROTWOOD_LEAVES.get(), bsOutput, modelOutput, itemOutput);
 
-        
+
         bmg.createAxisAlignedPillarBlock(ModBlocks.ROTWOOD.get(), TexturedModel.COLUMN);
         bmg.createAxisAlignedPillarBlock(ModBlocks.STRIPPED_ROTWOOD_LOG.get(), TexturedModel.COLUMN);
         bmg.createAxisAlignedPillarBlock(ModBlocks.ROTWOOD_WOOD.get(), TexturedModel.COLUMN);
         bmg.createAxisAlignedPillarBlock(ModBlocks.STRIPPED_ROTWOOD_WOOD.get(), TexturedModel.COLUMN);
 
-        
+
         TextureMapping planksMapping = TextureMapping.cube(ModBlocks.ROTWOOD_PLANKS.get());
         rotwoodStairs(ModBlocks.ROTWOOD_STAIRS.get(), planksMapping, bsOutput, modelOutput);
         rotwoodSlab(ModBlocks.ROTWOOD_SLAB.get(), planksMapping, bsOutput, modelOutput);
@@ -142,7 +142,7 @@ public class ModModelProvider implements DataProvider {
         rotwoodButton(ModBlocks.ROTWOOD_BUTTON.get(), planksMapping, bsOutput, modelOutput, itemOutput);
         rotwoodPressurePlate(ModBlocks.ROTWOOD_PRESSURE_PLATE.get(), planksMapping, bsOutput, modelOutput);
 
-        
+
         bmg.createTrivialCube(ModBlocks.BLEWIT_MUSHROOM_CAP.get());
         bmg.createTrivialCube(ModBlocks.MOREL_MUSHROOM_CAP.get());
         bmg.createTrivialCube(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get());
@@ -163,7 +163,7 @@ public class ModModelProvider implements DataProvider {
         saplingBlock(ModBlocks.ROTWOOD_SAPLING.get(), bsOutput, modelOutput, itemOutput);
     }
 
-    
+
 
     private void overgrownGrassBlock(Block block,
                                        Consumer<BlockModelDefinitionGenerator> bsOutput,
@@ -456,7 +456,7 @@ public class ModModelProvider implements DataProvider {
         ));
     }
 
-    
+
 
     private void leavesBlock(Block block,
                               Consumer<BlockModelDefinitionGenerator> bsOutput,
@@ -545,7 +545,7 @@ public class ModModelProvider implements DataProvider {
     }
 
     private void generateItems(ItemModelOutput itemOutput, BiConsumer<Identifier, ModelInstance> modelOutput) {
-        
+
         flatItem(ModItems.BLEWIT.get(), itemOutput, modelOutput);
         flatItem(ModItems.MOREL.get(), itemOutput, modelOutput);
         flatItem(ModItems.JACK_O_LANTERN_MUSHROOM.get(), itemOutput, modelOutput);
@@ -555,7 +555,7 @@ public class ModModelProvider implements DataProvider {
         flatItem(ModItems.ROASTED_JACK_O_LANTERN_MUSHROOM.get(), itemOutput, modelOutput);
         flatItem(ModItems.ROASTED_NECROSHROOM.get(), itemOutput, modelOutput);
 
-        
+
         blockItem(ModItems.ROTWOOD_ITEM.get(), ModBlocks.ROTWOOD.get(), itemOutput);
         blockItem(ModItems.STRIPPED_ROTWOOD_LOG_ITEM.get(), ModBlocks.STRIPPED_ROTWOOD_LOG.get(), itemOutput);
         blockItem(ModItems.ROTWOOD_WOOD_ITEM.get(), ModBlocks.ROTWOOD_WOOD.get(), itemOutput);
@@ -563,9 +563,9 @@ public class ModModelProvider implements DataProvider {
         blockItem(ModItems.ROTWOOD_PLANKS_ITEM.get(), ModBlocks.ROTWOOD_PLANKS.get(), itemOutput);
         blockItem(ModItems.ROTWOOD_STAIRS_ITEM.get(), ModBlocks.ROTWOOD_STAIRS.get(), itemOutput);
         blockItem(ModItems.ROTWOOD_SLAB_ITEM.get(), ModBlocks.ROTWOOD_SLAB.get(), itemOutput);
-        
+
         blockItem(ModItems.ROTWOOD_FENCE_GATE_ITEM.get(), ModBlocks.ROTWOOD_FENCE_GATE.get(), itemOutput);
-        
+
         blockItem(ModItems.ROTWOOD_PRESSURE_PLATE_ITEM.get(), ModBlocks.ROTWOOD_PRESSURE_PLATE.get(), itemOutput);
 
         blockItem(ModItems.BLEWIT_MUSHROOM_CAP_ITEM.get(), ModBlocks.BLEWIT_MUSHROOM_CAP.get(), itemOutput);
@@ -583,14 +583,14 @@ public class ModModelProvider implements DataProvider {
         blockItem(ModItems.JACK_O_LANTERN_VEIN_ITEM.get(), ModBlocks.JACK_O_LANTERN_VEIN.get(), itemOutput);
         blockItem(ModItems.DEATH_VINE_ITEM.get(), ModBlocks.DEATH_VINE.get(), itemOutput);
 
-        
+
         flatItem(ModItems.MYCELIUM_FABRIC.get(), itemOutput, modelOutput);
 
-        
+
         flatItem(ModItems.ROTWOOD_DOOR_ITEM.get(), itemOutput, modelOutput);
     }
 
-    
+
 
     private void flatItem(Item item, ItemModelOutput itemOutput, BiConsumer<Identifier, ModelInstance> modelOutput) {
         Identifier modelId = ModelTemplates.FLAT_ITEM.create(item, TextureMapping.layer0(item), modelOutput);
@@ -611,6 +611,6 @@ public class ModModelProvider implements DataProvider {
     }
 
     interface ItemModelOutput extends net.minecraft.client.data.models.ItemModelOutput {
-        
+
     }
 }

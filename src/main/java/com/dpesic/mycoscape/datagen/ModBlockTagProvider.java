@@ -18,7 +18,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        
+
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.ROTWOOD.get())
                 .add(ModBlocks.STRIPPED_ROTWOOD_LOG.get())
@@ -38,31 +38,31 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get())
                 .add(ModBlocks.NECROSHROOM_CAP.get());
 
-        
+
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.MYCOSLATE.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MYCOSLATE.get());
 
-        
+
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.OVERGROWN_GRASS.get());
 
         tag(BlockTags.DIRT)
                 .add(ModBlocks.OVERGROWN_GRASS.get());
 
-        
+
         tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.NECROSHROOM_HYPHAE.get())
                 .add(ModBlocks.ROTWOOD_LEAVES.get())
                 .add(ModBlocks.DEATH_VINE.get());
 
-        
+
         tag(BlockTags.LEAVES)
                 .add(ModBlocks.ROTWOOD_LEAVES.get());
 
-        
+
         tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.ROTWOOD.get())
                 .add(ModBlocks.STRIPPED_ROTWOOD_LOG.get())
@@ -96,7 +96,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(ModBlocks.ROTWOOD_PRESSURE_PLATE.get());
 
-        
+
         tag(MycoscapeBlockTags.FUNGI_GROUND)
                 .addTag(BlockTags.DIRT)
                 .addTag(MycoscapeBlockTags.ROTWOOD)
@@ -107,7 +107,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(MycoscapeBlockTags.MYCOSLATE)
                 .add(ModBlocks.MYCOSLATE.get());
 
-        
+
         tag(BlockTags.STONE_ORE_REPLACEABLES)
                 .add(ModBlocks.MYCOSLATE.get());
         tag(BlockTags.DEEPSLATE_ORE_REPLACEABLES)

@@ -35,7 +35,7 @@ public class ModItems {
         );
     }
 
-    
+
 
     public static final DeferredHolder<Item, BlewitItem> BLEWIT = ITEMS.register(
             "blewit",
@@ -65,7 +65,7 @@ public class ModItems {
             )
     );
 
-    
+
 
     private static final FoodProperties ROASTED_MUSHROOM_FOOD = new FoodProperties.Builder()
             .nutrition(5)
@@ -132,7 +132,7 @@ public class ModItems {
             )
     );
 
-    
+
 
     public static final DeferredHolder<Item, Item> MYCELIUM_FABRIC = ITEMS.register(
             "mycelium_fabric",
@@ -141,11 +141,11 @@ public class ModItems {
             )
     );
 
-    
 
-    
 
-    
+
+
+
 
     public static final DeferredHolder<Item, BlockItem> BLEWIT_MUSHROOM_CAP_ITEM =
             registerBlockItem("blewit_mushroom_cap", ModBlocks.BLEWIT_MUSHROOM_CAP);
@@ -206,7 +206,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> ROTWOOD_PRESSURE_PLATE_ITEM =
             registerBlockItem("rotwood_pressure_plate", ModBlocks.ROTWOOD_PRESSURE_PLATE);
 
-    
+
 
     public static final DeferredHolder<Item, BlockItem> OVERGROWN_GRASS_ITEM =
             registerBlockItem("overgrown_grass", ModBlocks.OVERGROWN_GRASS);

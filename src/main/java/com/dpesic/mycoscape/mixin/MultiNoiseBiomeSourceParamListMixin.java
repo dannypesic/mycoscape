@@ -34,18 +34,18 @@ public class MultiNoiseBiomeSourceParamListMixin {
     private void addMycoscapeBiomes(MultiNoiseBiomeSourceParameterList.Preset preset,
                                      HolderGetter<Biome> biomes,
                                      CallbackInfo ci) {
-        
-        
+
+
         if (DatagenModLoader.isRunningDataGen()) return;
-        
-        
-        
+
+
+
         if (!ModBiomes.INJECTION_ENABLED) return;
 
         if (!preset.id().equals(Identifier.withDefaultNamespace("overworld"))) return;
 
-        
-        
+
+
         Optional<Holder.Reference<Biome>> surface = biomes.get(ModBiomes.MYCOSCAPE_SURFACE);
         Optional<Holder.Reference<Biome>> caves   = biomes.get(ModBiomes.MYCOSCAPE_CAVES);
         if (surface.isEmpty() || caves.isEmpty()) return;
@@ -54,12 +54,12 @@ public class MultiNoiseBiomeSourceParamListMixin {
 
         list.add(Pair.of(
             Climate.parameters(
-                Climate.Parameter.span(-0.05f, 0.4f),   
-                Climate.Parameter.span(0.05f, 0.35f),   
-                Climate.Parameter.span(0.0f, 0.35f),    
-                Climate.Parameter.span(-0.375f, 0.05f), 
-                Climate.Parameter.point(0.0f),           
-                Climate.Parameter.span(0.1f, 0.9f),     
+                Climate.Parameter.span(-0.05f, 0.4f),
+                Climate.Parameter.span(0.05f, 0.35f),
+                Climate.Parameter.span(0.0f, 0.35f),
+                Climate.Parameter.span(-0.375f, 0.05f),
+                Climate.Parameter.point(0.0f),
+                Climate.Parameter.span(0.1f, 0.9f),
                 0L
             ),
             surface.get()
@@ -67,12 +67,12 @@ public class MultiNoiseBiomeSourceParamListMixin {
 
         list.add(Pair.of(
             Climate.parameters(
-                Climate.Parameter.span(0.0f, 0.35f),    
-                Climate.Parameter.span(0.1f, 0.3f),     
-                Climate.Parameter.span(-0.11f, 0.55f),  
-                Climate.Parameter.span(-0.375f, 0.05f), 
-                Climate.Parameter.span(0.65f, 0.9f),    
-                Climate.Parameter.span(0.8f, 0.9f),     
+                Climate.Parameter.span(0.0f, 0.35f),
+                Climate.Parameter.span(0.1f, 0.3f),
+                Climate.Parameter.span(-0.11f, 0.55f),
+                Climate.Parameter.span(-0.375f, 0.05f),
+                Climate.Parameter.span(0.65f, 0.9f),
+                Climate.Parameter.span(0.8f, 0.9f),
                 0L
             ),
             caves.get()

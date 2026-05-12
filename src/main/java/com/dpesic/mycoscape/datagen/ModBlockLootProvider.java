@@ -19,7 +19,7 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
 
     @Override
     protected void generate() {
-        
+
         dropSelf(ModBlocks.OVERGROWN_GRASS.get());
         dropSelf(ModBlocks.MYCOSLATE.get());
         dropSelf(ModBlocks.JACK_O_LANTERN_VEIN.get());
@@ -27,20 +27,20 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
 
         add(ModBlocks.NECROSHROOM_HYPHAE.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.NECROSHROOM_HYPHAE.get()));
 
-        
+
         add(ModBlocks.DEATH_VINE.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.DEATH_VINE.get()));
 
-        
-        add(ModBlocks.ROTWOOD_LEAVES.get(), createShearsOrSilkTouchOnlyDrop(ModBlocks.ROTWOOD_LEAVES.get()));
+
+        add(ModBlocks.ROTWOOD_LEAVES.get(), createLeavesDrops(ModBlocks.ROTWOOD_LEAVES.get(), ModBlocks.ROTWOOD_SAPLING.get(), 0.05F, 0.0625F, 0.083333336F, 0.1F));
         dropSelf(ModBlocks.ROTWOOD_SAPLING.get());
 
-        
+
         dropSelf(ModBlocks.ROTWOOD.get());
         dropSelf(ModBlocks.STRIPPED_ROTWOOD_LOG.get());
         dropSelf(ModBlocks.ROTWOOD_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_ROTWOOD_WOOD.get());
 
-        
+
         dropSelf(ModBlocks.ROTWOOD_PLANKS.get());
         dropSelf(ModBlocks.ROTWOOD_STAIRS.get());
         add(ModBlocks.ROTWOOD_SLAB.get(), createSlabItemTable(ModBlocks.ROTWOOD_SLAB.get()));
@@ -51,7 +51,7 @@ public class ModBlockLootProvider extends net.minecraft.data.loot.BlockLootSubPr
         dropSelf(ModBlocks.ROTWOOD_BUTTON.get());
         dropSelf(ModBlocks.ROTWOOD_PRESSURE_PLATE.get());
 
-        
+
         add(ModBlocks.BLEWIT_MUSHROOM_CAP.get(), createMushroomBlockDrop(ModBlocks.BLEWIT_MUSHROOM_CAP.get(), ModItems.BLEWIT.get()));
         add(ModBlocks.MOREL_MUSHROOM_CAP.get(), createMushroomBlockDrop(ModBlocks.MOREL_MUSHROOM_CAP.get(), ModItems.MOREL.get()));
         add(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get(), createMushroomBlockDrop(ModBlocks.JACK_O_LANTERN_MUSHROOM_CAP.get(), ModItems.JACK_O_LANTERN_MUSHROOM.get()));

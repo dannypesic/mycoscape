@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "mycoscape:mycoscape_surface",
+  "biomes": "mycoscape:fungal_forest",
   "features": [
     "mycoscape:rotwood_tree",
     "mycoscape:jack_o_lantern_vein",

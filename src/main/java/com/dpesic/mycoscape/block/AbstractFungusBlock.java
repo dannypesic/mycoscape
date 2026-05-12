@@ -31,19 +31,19 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Optional;
 
-public abstract class AbstractFungusBlock extends BushBlock { 
+public abstract class AbstractFungusBlock extends BushBlock {
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 1);
     public AbstractFungusBlock(Properties props) {
         super(props);
     }
 
-    public abstract ItemStack dropItemstack(); 
+    public abstract ItemStack dropItemstack();
 
     protected abstract ResourceKey<ConfiguredFeature<?, ?>> getHugeMushroomFeature();
 
-    protected abstract VoxelShape shapeMycelium(); 
+    protected abstract VoxelShape shapeMycelium();
 
-    protected abstract VoxelShape shapeMushroom(); 
+    protected abstract VoxelShape shapeMushroom();
 
 
     @Override
@@ -78,13 +78,13 @@ public abstract class AbstractFungusBlock extends BushBlock {
     public boolean harvest(BlockState state, Level level, BlockPos pos, Player player){
         int age = state.getValue(AGE);
 
-        
+
         if (age >= 1) {
             popResource(level, pos, dropItemstack());
             level.playSound(null, pos, SoundEvents.ROOTS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
 
-            
-            level.setBlock(pos, state.setValue(AGE, 0), 2); 
+
+            level.setBlock(pos, state.setValue(AGE, 0), 2);
             level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
             return true;
         }

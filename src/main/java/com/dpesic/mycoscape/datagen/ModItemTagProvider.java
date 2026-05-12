@@ -18,7 +18,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        
+
         tag(MycoscapeItemTags.CUSTOM_MUSHROOMS)
                 .add(ModItems.BLEWIT.get())
                 .add(ModItems.MOREL.get())

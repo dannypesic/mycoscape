@@ -9,7 +9,7 @@ public final class BlockProps {
         ToolTier(float speed) { this.speed = speed; }
     }
 
-    
+
 
     public static float ticks(int ticks, ToolTier tier) {
         return ticks * tier.speed / 30f;

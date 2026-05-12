@@ -23,7 +23,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(Registries.BLOCK, Mycoscape.MODID);
 
-    
+
 
     public static final DeferredHolder<Block, BlewitFungusBlock> BLEWIT_FUNGUS = BLOCKS.register(
             "blewit_fungus",
@@ -73,7 +73,7 @@ public class ModBlocks {
             )
     );
 
-    
+
 
     public static final DeferredHolder<Block, HugeMushroomBlock> BLEWIT_MUSHROOM_CAP = BLOCKS.register(
             "blewit_mushroom_cap",
@@ -307,7 +307,7 @@ public class ModBlocks {
             )
     );
 
-    
+
 
     public static final DeferredHolder<Block, Block> OVERGROWN_GRASS = BLOCKS.register(
             "overgrown_grass",
@@ -353,7 +353,7 @@ public class ModBlocks {
             )
     );
 
-    
+
 
     public static final DeferredHolder<Block, DeathVineBlock> DEATH_VINE = BLOCKS.register(
             "death_vine",

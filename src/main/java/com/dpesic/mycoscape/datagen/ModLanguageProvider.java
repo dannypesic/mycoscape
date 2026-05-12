@@ -13,7 +13,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        
+
         addItem(ModItems.BLEWIT,                            "Blewit");
         addItem(ModItems.MOREL,                             "Morel");
         addItem(ModItems.JACK_O_LANTERN_MUSHROOM,           "Jack o'Lantern Mushroom");
@@ -23,10 +23,10 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.ROASTED_JACK_O_LANTERN_MUSHROOM,   "Roasted Jack o'Lantern Mushroom");
         addItem(ModItems.ROASTED_NECROSHROOM,               "Roasted Necroshroom");
 
-        
+
         addItem(ModItems.MYCELIUM_FABRIC,           "Mycelium Fabric");
 
-        
+
         addBlock(ModBlocks.BLEWIT_FUNGUS,                  "Blewit Fungus");
         addBlock(ModBlocks.MOREL_FUNGUS,                   "Morel Fungus");
         addBlock(ModBlocks.JACK_O_LANTERN_FUNGUS,          "Jack o'Lantern Fungus");
@@ -83,10 +83,10 @@ addBlock(ModBlocks.DEATH_VINE,              "Death Vine");
         addItem(ModItems.JACK_O_LANTERN_VEIN_ITEM,  "Jack o'Lantern Vein");
         addItem(ModItems.DEATH_VINE_ITEM,           "Death Vine");
 
-        
+
         add("itemGroup.mycoscape.mycoscape", "Mycoscape");
 
-        add("biome.mycoscape.mycoscape_surface", "Mycoscape");
-        add("biome.mycoscape.mycoscape_caves",   "Mycoscape Caves");
+        add("biome.mycoscape.fungal_forest",    "Fungal Forest");
+        add("biome.mycoscape.necrotic_caverns", "Necrotic Caverns");
     }
 }
