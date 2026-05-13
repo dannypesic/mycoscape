@@ -14,23 +14,4 @@ A NeoForge 1.21.11 Minecraft mod, forked from the legacy Mycoscape tech project,
 
 **Terrain blocks**: Overgrown Grass, Mycoslate, Necroshroom Hyphae, Jack O'Lantern Vein.
 
-**Mushroom food items**: Blewit, Morel, Jack O'Lantern Mushroom, and Necroshroom are all edible with custom status effects.
-
-### Textures List:
-item
-- [ ] mycelium_fabric.png
-- [ ] roasted_blewit.png
-- [ ] roasted jol
-- [ ] roasted morel
-- [ ] roasted necro
-block
-- [ ] death vine
-- [ ] blewit cap
-- [ ] jol cap
-- [ ] morel cap
-- [ ] necro cap
-- [ ] rw trapdoor
-- [ ] stripped rw log s
-- [ ] stripped rw log t
-- [ ] strip rw wood s
-- [ ] strip rw wood r
+**Mushroom food items**: Blewit, Morel, Jack O'Lantern Mushroom, and Necroshroom are all edible with custom status effects
