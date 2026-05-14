@@ -37,7 +37,7 @@ public class HugeBlewitMushroomFeature extends AbstractHugeMushroomFeature {
                 int dy = (d == 0) ? treeHeight - 1 : treeHeight - d;
 
                 blockPos.setWithOffset(origin, dx, dy, dz);
-                this.placeMushroomBlock(level, blockPos, config.capProvider.getState(random, origin));
+                level.setBlock(blockPos, config.capProvider.getState(random, origin), 2);
             }
         }
     }

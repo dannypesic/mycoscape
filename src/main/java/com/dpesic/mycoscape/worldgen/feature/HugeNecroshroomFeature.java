@@ -54,7 +54,7 @@ public class HugeNecroshroomFeature extends AbstractHugeMushroomFeature {
                                 .setValue(HugeMushroomBlock.NORTH, dz < -center)
                                 .setValue(HugeMushroomBlock.SOUTH, dz > center);
                     }
-                    this.placeMushroomBlock(level, blockPos, state);
+                    level.setBlock(blockPos, state, 2);
                 }
             }
         }
@@ -63,7 +63,7 @@ public class HugeNecroshroomFeature extends AbstractHugeMushroomFeature {
         for (int dx = -2; dx <= 2; dx++) {
             for (int dz = -2; dz <= 2; dz++) {
                 blockPos.setWithOffset(origin, dx, treeHeight - 1, dz);
-                this.placeMushroomBlock(level, blockPos, config.capProvider.getState(random, origin));
+                level.setBlock(blockPos, config.capProvider.getState(random, origin), 2);
             }
         }
 
@@ -71,7 +71,7 @@ public class HugeNecroshroomFeature extends AbstractHugeMushroomFeature {
         for (int dx = -1; dx <= 1; dx++) {
             for (int dz = -1; dz <= 1; dz++) {
                 blockPos.setWithOffset(origin, dx, treeHeight, dz);
-                this.placeMushroomBlock(level, blockPos, config.capProvider.getState(random, origin));
+                level.setBlock(blockPos, config.capProvider.getState(random, origin), 2);
             }
         }
     }
@@ -81,7 +81,7 @@ public class HugeNecroshroomFeature extends AbstractHugeMushroomFeature {
                                       BlockPos.MutableBlockPos mutablePos,
                                       HugeMushroomFeatureConfiguration config) {
         int y = pos.getY();
-        if (y < level.getMinY() + 1 || y + maxHeight + 1 > level.getMaxY()) return false;
+        if (y < level.getMinBuildHeight() + 1 || y + maxHeight + 1 > level.getMaxBuildHeight()) return false;
 
         BlockState below = level.getBlockState(pos.below());
         if (!isDirt(below)

@@ -55,6 +55,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.NECROSHROOM_HYPHAE_ITEM.get());
                         output.accept(ModItems.JACK_O_LANTERN_VEIN_ITEM.get());
 output.accept(ModItems.DEATH_VINE_ITEM.get());
+                        output.accept(ModItems.ROTWOOD_LEAF_LITTER_ITEM.get());
                     })
                     .build());
 }

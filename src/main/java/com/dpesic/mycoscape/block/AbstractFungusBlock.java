@@ -10,15 +10,14 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -31,7 +30,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Optional;
 
-public abstract class AbstractFungusBlock extends BushBlock {
+public abstract class AbstractFungusBlock extends BushBlock implements BonemealableBlock {
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 1);
     public AbstractFungusBlock(Properties props) {
         super(props);
@@ -92,10 +91,9 @@ public abstract class AbstractFungusBlock extends BushBlock {
     }
 
     @Override
-    public InteractionResult useItemOn(ItemStack held, BlockState state, Level level, BlockPos pos,
-                                       Player player, InteractionHand hand, BlockHitResult hit) {
-        if (held.getItem() instanceof BoneMealItem) return InteractionResult.PASS;
-        if (harvest(state, level, pos, player)){
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
+                                               Player player, BlockHitResult hit) {
+        if (harvest(state, level, pos, player)) {
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;

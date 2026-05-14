@@ -4,7 +4,7 @@ import com.dpesic.mycoscape.worldgen.ModBiomes;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Climate;
 import net.minecraft.world.level.biome.MultiNoiseBiomeSourceParameterList;
@@ -42,7 +42,7 @@ public class MultiNoiseBiomeSourceParamListMixin {
 
         if (!ModBiomes.INJECTION_ENABLED) return;
 
-        if (!preset.id().equals(Identifier.withDefaultNamespace("overworld"))) return;
+        if (!preset.id().equals(ResourceLocation.withDefaultNamespace("overworld"))) return;
 
 
 

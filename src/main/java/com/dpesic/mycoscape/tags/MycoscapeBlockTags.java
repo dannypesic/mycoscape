@@ -5,7 +5,7 @@ import com.dpesic.mycoscape.core.Mycoscape;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 
 public class MycoscapeBlockTags {
 
@@ -16,8 +16,8 @@ public class MycoscapeBlockTags {
 
     private MycoscapeBlockTags() {
     }
-    static Identifier id(String id) {
-        return Identifier.fromNamespaceAndPath(Mycoscape.MODID, id);
+    static ResourceLocation id(String id) {
+        return ResourceLocation.fromNamespaceAndPath(Mycoscape.MODID, id);
     }
 
     public static TagKey<Block> mycoscapeTag(String path) {

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mycoscape:item/blewit"
+    "layer0": "mycoscape:block/rotwood_leaf_litter"
   }
 }

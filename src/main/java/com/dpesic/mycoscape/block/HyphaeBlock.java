@@ -1,9 +1,9 @@
 package com.dpesic.mycoscape.block;
 
 import com.dpesic.mycoscape.tags.MycoscapeBlockTags;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
@@ -18,10 +18,16 @@ public class HyphaeBlock extends BushBlock {
     public HyphaeBlock(Properties props) {
         super(props);
     }
-    public static final VoxelShape SHAPE = Block.column(14.0D, 0.0D, 8.0D);
 
     @Override
-    protected void entityInside(final BlockState state, final Level level, final BlockPos pos, final Entity entity, final InsideBlockEffectApplier effectApplier, final boolean isPrecise) {
+    public MapCodec<HyphaeBlock> codec() {
+        return simpleCodec(HyphaeBlock::new);
+    }
+
+    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 14, 16);
+
+    @Override
+    protected void entityInside(final BlockState state, final Level level, final BlockPos pos, final Entity entity) {
         entity.setDeltaMovement(entity.getDeltaMovement().multiply(0.85, 1, 0.85));
     }
 
@@ -35,7 +41,6 @@ public class HyphaeBlock extends BushBlock {
         return SHAPE;
     }
 
-
     @Override
     protected boolean mayPlaceOn(BlockState below, BlockGetter level, BlockPos pos) {
         return below.is(MycoscapeBlockTags.FUNGI_GROUND);
@@ -46,6 +51,4 @@ public class HyphaeBlock extends BushBlock {
         BlockPos belowPos = pos.below();
         return mayPlaceOn(level.getBlockState(belowPos), level, belowPos);
     }
-
-
 }

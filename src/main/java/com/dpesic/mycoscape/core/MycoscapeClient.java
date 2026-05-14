@@ -6,13 +6,10 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.client.gui.ConfigurationScreen;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
 @Mod(value = Mycoscape.MODID, dist = Dist.CLIENT)
 public class MycoscapeClient {
     public MycoscapeClient(ModContainer container, IEventBus modEventBus) {
-        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         modEventBus.addListener(MycoscapeClient::registerBlockColors);
     }
 

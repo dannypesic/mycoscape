@@ -3,20 +3,14 @@ package com.dpesic.mycoscape.core;
 import com.dpesic.mycoscape.item.*;
 
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.component.Consumable;
-import net.minecraft.world.item.component.Consumables;
-import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.List;
 
 public class ModItems {
     private ModItems() {}
@@ -27,10 +21,9 @@ public class ModItems {
     public static <T extends Block> DeferredHolder<Item, BlockItem> registerBlockItem(String name, DeferredHolder<Block, T> block) {
         return ITEMS.register(
                 name,
-                rn -> new BlockItem(
+                () -> new BlockItem(
                         block.get(),
                         new Item.Properties()
-                                .setId(ResourceKey.create(Registries.ITEM, rn))
                 )
         );
     }
@@ -39,96 +32,71 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BlewitItem> BLEWIT = ITEMS.register(
             "blewit",
-            rn -> new BlewitItem(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, rn))
+            () -> new BlewitItem(new Item.Properties()
             )
     );
 
     public static final DeferredHolder<Item, MorelItem> MOREL = ITEMS.register(
             "morel",
-            rn -> new MorelItem(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, rn))
+            () -> new MorelItem(new Item.Properties()
             )
     );
 
     public static final DeferredHolder<Item, JackOLanternMushroomItem> JACK_O_LANTERN_MUSHROOM = ITEMS.register(
             "jack_o_lantern_mushroom",
-            rn -> new JackOLanternMushroomItem(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, rn))
+            () -> new JackOLanternMushroomItem(new Item.Properties()
             )
     );
 
     public static final DeferredHolder<Item, NecroshroomItem> NECROSHROOM = ITEMS.register(
             "necroshroom",
-            rn -> new NecroshroomItem(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, rn))
+            () -> new NecroshroomItem(new Item.Properties()
             )
     );
 
 
 
-    private static final FoodProperties ROASTED_MUSHROOM_FOOD = new FoodProperties.Builder()
-            .nutrition(5)
-            .saturationModifier(0.4f)
-            .build();
-
-    private static final Consumable ROASTED_BLEWIT_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(
-                    List.of(new MobEffectInstance(MobEffects.SPEED, 200, 2)),
-                    1.0f
-            ))
-            .build();
-
-    private static final Consumable ROASTED_MOREL_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(
-                    List.of(new MobEffectInstance(MobEffects.REGENERATION, 120, 0)),
-                    1.0f
-            ))
-            .build();
-
-    private static final Consumable ROASTED_JACK_O_LANTERN_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(
-                    List.of(new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 0)),
-                    1.0f
-            ))
-            .build();
-
-    private static final Consumable ROASTED_NECROSHROOM_CONSUMABLE = Consumables.defaultFood()
-            .onConsume(new ApplyStatusEffectsConsumeEffect(
-                    List.of(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0)),
-                    1.0f
-            ))
-            .build();
-
     public static final DeferredHolder<Item, Item> ROASTED_BLEWIT = ITEMS.register(
             "roasted_blewit",
-            rn -> new Item(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, rn))
-                    .food(ROASTED_MUSHROOM_FOOD, ROASTED_BLEWIT_CONSUMABLE)
+            () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .nutrition(5)
+                            .saturationModifier(0.4f)
+                            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 2), 1.0f)
+                            .build())
             )
     );
 
     public static final DeferredHolder<Item, Item> ROASTED_MOREL = ITEMS.register(
             "roasted_morel",
-            rn -> new Item(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, rn))
-                    .food(ROASTED_MUSHROOM_FOOD, ROASTED_MOREL_CONSUMABLE)
+            () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .nutrition(5)
+                            .saturationModifier(0.4f)
+                            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 120, 0), 1.0f)
+                            .build())
             )
     );
 
     public static final DeferredHolder<Item, Item> ROASTED_JACK_O_LANTERN_MUSHROOM = ITEMS.register(
             "roasted_jack_o_lantern_mushroom",
-            rn -> new Item(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, rn))
-                    .food(ROASTED_MUSHROOM_FOOD, ROASTED_JACK_O_LANTERN_CONSUMABLE)
+            () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .nutrition(5)
+                            .saturationModifier(0.4f)
+                            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 0), 1.0f)
+                            .build())
             )
     );
 
     public static final DeferredHolder<Item, Item> ROASTED_NECROSHROOM = ITEMS.register(
             "roasted_necroshroom",
-            rn -> new Item(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, rn))
-                    .food(ROASTED_MUSHROOM_FOOD, ROASTED_NECROSHROOM_CONSUMABLE)
+            () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .nutrition(5)
+                            .saturationModifier(0.4f)
+                            .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 100, 0), 1.0f)
+                            .build())
             )
     );
 
@@ -136,14 +104,9 @@ public class ModItems {
 
     public static final DeferredHolder<Item, Item> MYCELIUM_FABRIC = ITEMS.register(
             "mycelium_fabric",
-            rn -> new Item(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, rn))
+            () -> new Item(new Item.Properties()
             )
     );
-
-
-
-
 
 
 
@@ -222,4 +185,7 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BlockItem> DEATH_VINE_ITEM =
             registerBlockItem("death_vine", ModBlocks.DEATH_VINE);
+
+    public static final DeferredHolder<Item, BlockItem> ROTWOOD_LEAF_LITTER_ITEM =
+            registerBlockItem("rotwood_leaf_litter", ModBlocks.ROTWOOD_LEAF_LITTER);
 }

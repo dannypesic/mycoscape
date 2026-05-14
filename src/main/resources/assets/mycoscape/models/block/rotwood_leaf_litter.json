@@ -1,0 +1,8 @@
+{
+  "parent": "mycoscape:block/leaf_litter",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "mycoscape:block/rotwood_leaf_litter",
+    "particle": "mycoscape:block/rotwood_leaf_litter"
+  }
+}

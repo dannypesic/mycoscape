@@ -28,7 +28,7 @@ public class HugeJackOLanternMushroomFeature extends AbstractHugeMushroomFeature
                 boolean zEdge = Math.abs(dz) == r;
                 if (xEdge == zEdge) continue;
                 blockPos.setWithOffset(origin, dx, treeHeight, dz);
-                this.placeMushroomBlock(level, blockPos, config.capProvider.getState(random, origin));
+                level.setBlock(blockPos, config.capProvider.getState(random, origin), 2);
             }
         }
 
@@ -39,7 +39,7 @@ public class HugeJackOLanternMushroomFeature extends AbstractHugeMushroomFeature
         for (int dx = -inner; dx <= inner; dx++) {
             for (int dz = -inner; dz <= inner; dz++) {
                 blockPos.setWithOffset(origin, dx, treeHeight - 1, dz);
-                this.placeMushroomBlock(level, blockPos, config.capProvider.getState(random, origin));
+                level.setBlock(blockPos, config.capProvider.getState(random, origin), 2);
             }
         }
 
@@ -49,7 +49,7 @@ public class HugeJackOLanternMushroomFeature extends AbstractHugeMushroomFeature
         for (int dx = -1; dx <= 1; dx++) {
             for (int dz = -1; dz <= 1; dz++) {
                 blockPos.setWithOffset(origin, dx, treeHeight - 2, dz);
-                this.placeMushroomBlock(level, blockPos, config.capProvider.getState(random, origin));
+                level.setBlock(blockPos, config.capProvider.getState(random, origin), 2);
             }
         }
     }

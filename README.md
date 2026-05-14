@@ -1,6 +1,6 @@
 # Mycoscape
 
-A NeoForge 1.21.11 Minecraft mod, forked from the legacy [Mycoscape](https://github.com/dannypesic/mycoscape-legacy) project, refocused entirely on environmental worldgen, a fungal forest biome, and a full decorative block palette built around mushrooms and rotwood.
+A NeoForge 1.21.1 Minecraft mod (1.21.1 branch), forked from the legacy [Mycoscape](https://github.com/dannypesic/mycoscape-legacy) project, refocused entirely on environmental worldgen, a fungal forest biome, and a full decorative block palette built around mushrooms and rotwood.
 
 ## Features
 

@@ -12,8 +12,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,18 +22,16 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.level.redstone.Orientation;
-import org.jspecify.annotations.Nullable;
+import javax.annotation.Nullable;
 
-public class FungalConduitBlock extends Block{
-    private static final VoxelShape SHAPE;
+public class FungalConduitBlock extends Block {
+    private static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 16, 12);
     public static final EnumProperty<Direction> FACING;
     public static final IntegerProperty POWER = BlockStateProperties.POWER;
 
-
     public FungalConduitBlock(final BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(POWER,0));
+        this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(POWER, 0));
     }
 
     public @Nullable BlockState getStateForPlacement(final BlockPlaceContext context) {
@@ -70,11 +67,8 @@ public class FungalConduitBlock extends Block{
                 for (int z = -zRadius; z <= zRadius; z++) {
                     BlockPos checkPos = blockPos.offset(x, y, z);
                     BlockState state = level.getBlockState(checkPos);
-
                     if (state.is(blockTag)) {
                         found++;
-
-
                         if (random.nextInt(found) == 0) {
                             chosen = checkPos;
                         }
@@ -82,7 +76,6 @@ public class FungalConduitBlock extends Block{
                 }
             }
         }
-
         return chosen;
     }
 
@@ -94,43 +87,32 @@ public class FungalConduitBlock extends Block{
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource rand) {
         int signal = getInputSignal(level, pos, state);
-
         if (rand.nextInt(5) == 0) {
-
-
             if (signal == 15) {
                 if (!level.isClientSide()) {
                     BlockPos woodPos = findRandomBlock(pos, level, BlockTags.LOGS, 5, 5, 5);
                     if (woodPos != null) {
-                        level.playSound(null, woodPos, SoundEvents.CREAKING_AMBIENT, SoundSource.BLOCKS, 1.0F, 0.6F + level.random.nextFloat() * 0.2F);
+                        level.playSound(null, woodPos, SoundEvents.WOOD_STEP, SoundSource.BLOCKS, 1.0F, 0.6F + level.random.nextFloat() * 0.2F);
                         level.setBlock(woodPos, ModBlocks.ROTWOOD.get().withPropertiesOf(level.getBlockState(woodPos)), 3);
                     }
                 }
-
             }
-
         }
-
     }
 
     @Override
-    protected void neighborChanged(final BlockState state, final Level level, final BlockPos pos, final Block block, final @Nullable Orientation orientation, final boolean movedByPiston) {
+    protected void neighborChanged(final BlockState state, final Level level, final BlockPos pos, final Block block, final BlockPos fromPos, final boolean isMoving) {
         int current = getInputSignal(level, pos, state);
         int previous = state.getValue(POWER);
-
         if (current != previous) {
-
             if (current == 15) {
                 level.playSound(null, pos, SoundEvents.BEACON_ACTIVATE, SoundSource.BLOCKS, 1.5F, 0.8F);
             }
-
             if (current < 15 && current > 0 && previous == 0) {
                 level.playSound(null, pos, SoundEvents.BEACON_DEACTIVATE, SoundSource.BLOCKS, 1.5F, 0.8F);
             }
-
             level.setBlock(pos, state.setValue(POWER, current), 3);
         }
-
     }
 
     protected void createBlockStateDefinition(final StateDefinition.Builder<Block, BlockState> builder) {
@@ -151,12 +133,13 @@ public class FungalConduitBlock extends Block{
     protected VoxelShape getShape(final BlockState state, final BlockGetter level, final BlockPos pos, final CollisionContext context) {
         return SHAPE;
     }
+
     @Override
-    protected BlockState updateShape(final BlockState state, final LevelReader level, final ScheduledTickAccess ticks, final BlockPos pos, final Direction directionToNeighbour, final BlockPos neighbourPos, final BlockState neighbourState, final RandomSource random) {
-        return super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+    protected BlockState updateShape(final BlockState state, final Direction direction, final BlockState neighbourState, final LevelAccessor level, final BlockPos pos, final BlockPos neighbourPos) {
+        return super.updateShape(state, direction, neighbourState, level, pos, neighbourPos);
     }
 
     static {
         FACING = BlockStateProperties.HORIZONTAL_FACING;
-        SHAPE = Block.column(16.0F, 0.0F, 8.0F);}
+    }
 }

@@ -38,7 +38,7 @@ public class HugeMorelMushroomFeature extends AbstractHugeMushroomFeature {
 
 
         blockPos.setWithOffset(origin, 0, treeHeight, 0);
-        this.placeMushroomBlock(level, blockPos, config.capProvider.getState(random, origin));
+        level.setBlock(blockPos, config.capProvider.getState(random, origin), 2);
     }
 
 
@@ -48,7 +48,7 @@ public class HugeMorelMushroomFeature extends AbstractHugeMushroomFeature {
         int[][] offsets = { {1, 0}, {-1, 0}, {0, 1}, {0, -1} };
         for (int[] o : offsets) {
             blockPos.setWithOffset(origin, o[0], dy, o[1]);
-            this.placeMushroomBlock(level, blockPos, config.capProvider.getState(random, origin));
+            level.setBlock(blockPos, config.capProvider.getState(random, origin), 2);
         }
     }
 
@@ -60,7 +60,7 @@ public class HugeMorelMushroomFeature extends AbstractHugeMushroomFeature {
             for (int dz = -1; dz <= 1; dz++) {
                 if (dx == 0 && dz == 0) continue;
                 blockPos.setWithOffset(origin, dx, dy, dz);
-                this.placeMushroomBlock(level, blockPos, config.capProvider.getState(random, origin));
+                level.setBlock(blockPos, config.capProvider.getState(random, origin), 2);
             }
         }
     }

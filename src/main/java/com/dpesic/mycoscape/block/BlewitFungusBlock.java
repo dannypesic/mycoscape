@@ -1,9 +1,10 @@
 package com.dpesic.mycoscape.block;
 
 import com.dpesic.mycoscape.core.ModItems;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -17,24 +18,27 @@ public class BlewitFungusBlock extends AbstractFungusBlock {
     }
 
     @Override
+    public MapCodec<BlewitFungusBlock> codec() {
+        return simpleCodec(BlewitFungusBlock::new);
+    }
+
+    @Override
     public ItemStack dropItemstack() {
-        int dropCount = 1;
-        return new ItemStack(ModItems.BLEWIT.get(), dropCount);
+        return new ItemStack(ModItems.BLEWIT.get(), 1);
     }
 
     @Override
     protected VoxelShape shapeMycelium() {
-        return Block.column(14.0D, 0.0D, 3.0D);
+        return Block.box(5, 0, 5, 11, 14, 11);
     }
 
     @Override
     protected VoxelShape shapeMushroom() {
-        return Block.column(14.0D, 0.0D, 14.0D);
+        return Block.box(0, 0, 0, 16, 14, 16);
     }
 
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getHugeMushroomFeature() {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath("mycoscape", "blewit_mushroom"));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath("mycoscape", "blewit_mushroom"));
     }
-
 }

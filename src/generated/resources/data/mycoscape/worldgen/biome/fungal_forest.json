@@ -1,43 +1,36 @@
 {
-  "attributes": {
-    "minecraft:audio/ambient_sounds": {
-      "additions": {
-        "sound": "minecraft:ambient.soul_sand_valley.additions",
-        "tick_chance": 0.006
-      },
-      "loop": "minecraft:ambient.soul_sand_valley.loop",
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2.0,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
-      }
-    },
-    "minecraft:audio/background_music": {
-      "default": {
-        "max_delay": 24000,
-        "min_delay": 12000,
-        "sound": "minecraft:music.overworld.deep_dark"
-      }
-    },
-    "minecraft:visual/ambient_particles": [
-      {
-        "particle": {
-          "type": "minecraft:mycelium"
-        },
-        "probability": 0.001
-      }
-    ],
-    "minecraft:visual/fog_color": "#2a3d32",
-    "minecraft:visual/sky_color": "#4a5a4f",
-    "minecraft:visual/water_fog_color": "#1f2a2d"
-  },
-  "carvers": [],
+  "carvers": {},
   "downfall": 0.8,
   "effects": {
-    "foliage_color": "#3a5e3a",
-    "grass_color": "#2e4d2e",
-    "water_color": "#2f3b3e"
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.006
+    },
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
+    "foliage_color": 3825210,
+    "fog_color": 2768178,
+    "grass_color": 3034414,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.deep_dark"
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:mycelium"
+      },
+      "probability": 0.001
+    },
+    "sky_color": 4872783,
+    "water_color": 3095358,
+    "water_fog_color": 2042413
   },
   "features": [],
   "has_precipitation": true,
